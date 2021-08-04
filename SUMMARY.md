@@ -17,6 +17,8 @@
 - [流量管理](concepts/traffic-management.md)
   - [流量管理基础概念](concepts/traffic-management-basic.md)
   - [Istio 中的 Sidecar 的流量路由详解](concepts/sidecar-traffic-routing-deep-dive.md)
+- 安全
+  - [mTLS](concepts/mtls.md)
 
 ## 数据平面
 
