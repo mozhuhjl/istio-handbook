@@ -1,6 +1,6 @@
 # 什么是服务网格？
 
-Service mesh 又译作 “服务网格”，作为服务间通信的基础设施层。Buoyant 公司的 CEO Willian Morgan 在他的这篇文章 [WHAT’S A SERVICE MESH? AND WHY DO I NEED ONE?](https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/) 中解释了什么是 Service Mesh，为什么云原生应用需要 Service Mesh。
+Service mesh 又译作 “服务网格”，作为服务间通信的基础设施层。Buoyant 公司的 CEO Willian Morgan 在他的这篇文章 [WHAT’S A SERVICE MESH? AND WHY DO I NEED ONE?](https://buoyant.io/what-is-a-service-mesh/) 中解释了什么是 Service Mesh，为什么云原生应用需要 Service Mesh。
 
 服务网格是用于处理服务间通信的专用基础设施层。它负责通过包含现代云原生应用程序的复杂服务拓扑来可靠地传递请求。实际上，服务网格通常通过一组轻量级网络代理来实现，这些代理与应用程序代码一起部署，而不需要感知应用程序本身。——  [Willian Morgan](https://twitter.com/wm) Buoyant CEO
 
@@ -15,7 +15,7 @@ Service mesh 又译作 “服务网格”，作为服务间通信的基础设施
 - 应用程序无感知
 - 解耦应用程序的重试/超时、监控、追踪和服务发现
 
-目前两款流行的服务网格开源软件 [Linkerd](https://linkerd.io) 和 [Istio](https://Istio.io) 都可以直接在 kubernetes 中集成，其中 Linkerd 已经成为 CNCF 成员，Istio 在 2018年7月31日宣布 [1.0](https://istio.io/zh/blog/2018/announcing-1.0/)。
+目前两款流行的服务网格开源软件 [Linkerd](https://linkerd.io) 和 [Istio](https://Istio.io) 都可以直接在 kubernetes 中集成，其中 Linkerd 是 CNCF 成员项目，并在 2021 年 7 月毕业。Istio 在 2018年7月31日宣布 [1.0](https://istio.io/zh/blog/2018/announcing-1.0/)，并在 2020 年 7 月将[商标捐献](https://istio.io/latest/blog/2020/open-usage/)给 [Open Usage Commons](https://openusage.org/)。
 
 ## 理解服务网格
 
@@ -63,34 +63,30 @@ Service mesh 又译作 “服务网格”，作为服务间通信的基础设施
 
 ## 服务网格全景图
 
-Service Mesh 的概念于 2016 年诞生至今仍在蓬勃发展，下面是由于 [ServiceMesher 社区](http://www.servicemesher.com)维护的[Service Mesh 列表](http://www.servicemesher.com/awesome-servicemesh/listed.html)，如您发现该列表中有所遗漏欢迎到 [servicemesher/awesome-servicemesh](https://github.com/servicemesher/awesome-servicemesh/) 上提交 PR。
+Service Mesh 的概念于 2016 年诞生至今仍在蓬勃发展，下面是部分服务网格或周边开源项目表：
 
 - [amalgam8](https://github.com/amalgam8/amalgam8) - 用于异构微服务的基于版本的路由网格
-- [ambassador](https://github.com/datawire/ambassador) - 开源的基于 Envoy proxy 构建的用于微服务的 Kubernetes 原生 API 网关 [https://www.getambassador.io](https://www.getambassador.io/)
+- [ambassador](https://github.com/datawire/ambassador) - 开源的基于 Envoy proxy 构建的用于微服务的 Kubernetes 原生 API 网关
 - [aspen-mesh](https://github.com/aspenmesh) - 隶属于 F5 的公司开发的 Service Mesh
-- [conduit](https://conduit.io/) - 适用于 Kubernetes 的轻量级 Service Mesh [https://conduit.io](https://conduit.io/)
-- [consul](https://github.com/hashicorp/consul) - Consul 一种分布式、高可用的和数据中心感知解决方案，用于跨动态分布式基础架构连接和配置应用程序。<https://www.consul.io/>
-- [dubbo](https://github.com/apache/incubator-dubbo) - Apache Dubbo™ (incubating)是一款高性能Java RPC框架。[http://dubbo.incubator.apache.org](http://dubbo.incubator.apache.org/)
-- [envoy](https://github.com/envoyproxy/envoy) - C++ 前端/服务代理 [https://www.envoyproxy.io](https://www.envoyproxy.io/)
+- [conduit](https://conduit.io/) - 适用于 Kubernetes 的轻量级 Service Mesh
+- [consul](https://github.com/hashicorp/consul) - Consul 一种分布式、高可用的和数据中心感知解决方案，用于跨动态分布式基础架构连接和配置应用程序。<>
+- [dubbo](https://github.com/apache/incubator-dubbo) - Apache Dubbo™ (incubating)是一款高性能Java RPC框架。
+- [envoy](https://github.com/envoyproxy/envoy) - C++ 前端/服务代理
 - [istio](https://github.com/istio) - 用于连接、保护、控制和观测服务。
 - [kong](https://github.com/Kong/kong) - 云原生 API 网关 <https://konghq.com/install>
 - [linkerd](https://github.com/linkerd/linkerd) - 云原生应用的开源 Service Mesh [https://linkerd.io](https://linkerd.io/)
 - [mesher](https://github.com/go-mesh/mesher) - 华为开源的基于轻量级基于 [go chassis](https://github.com/ServiceComb/go-chassis) 的 Service Mesh。
+- [mosn](https://github.com/mosn/mosn) - MOSN是由蚂蚁金服开源的一个模块化可观测的智能网络，可用作为 sidecar 部署在 Service Mesh 中。
 - [nginmesh](https://github.com/nginmesh/nginmesh) - 基于 Nginx 的 Service Mesh
-- [nginx-unit](https://github.com/nginx/unit) - NGINX Unit is a new, lightweight, open source application server built to meet the demands of today’s dynamic and distributed applications.
 - [servicecomb](https://github.com/ServiceComb) - ServiceComb 是华为开源的微服务框架，提供便捷的在云中开发和部署应用的方式。
-- [sofa-mesh](https://github.com/alipay/sofa-mesh) -  SOFAMesh 是蚂蚁金服开源的基于 Istio 的大规模服务网格解决方案。 <http://www.sofastack.tech/>
-- [sofa-mosn](https://github.com/alipay/sofa-mosn) - SOFAMosn 是由蚂蚁金服开源的一个模块化可观测的智能网络，可用作为 sidecar 部署在 Service Mesh 中。http://www.sofastack.tech
 - [tars](https://github.com/Tencent/Tars) - Tars 是腾讯开源的基于名称服务的高性能 RPC 框架。使用 tars 协议并提供半自动化运维平台。
 
 ## 参考
 
-- [WHAT’S A SERVICE MESH? AND WHY DO I NEED ONE? - buoyant.io](https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/)
 - [Istio: A service mesh for AWS ECS - medium.com](https://medium.com/attest-engineering/Istio-a-service-mesh-for-aws-ecs-937f201f847a)
-- [初次了解 Istio - istio.io](https://istio.io/blog/istio-service-mesh-for-microservices.html)
+- [初次了解 Istio - istio.io](https://istio.io/latest/news/releases/0.x/announcing-0.1/)
 - [Application Network Functions With ESBs, API Management, and Now.. Service Mesh? - blog.christianposta.com](http://blog.christianposta.com/microservices/application-network-functions-with-esbs-api-management-and-now-service-mesh/)
 - [Pattern: Service Mesh - philcalcado.com](http://philcalcado.com/2017/08/03/pattern_service_mesh.html)
-- [Envoy 官方文档中文版 - servicemesher.com](http://www.servicemesher.com/envoy/)
-- [Istio 官方文档 - istio.io](https://istio.io/zh)
-- [servicemesher/awesome-servicemesh - github.com](https://github.com/servicemesher/awesome-servicemesh/)
+- [Envoy 官方文档中文版 - cloudnative.to](https://cloudnative.to/envoy/)
+- [Istio 官方文档 - istio.io](https://istio.io)
 

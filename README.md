@@ -1,4 +1,4 @@
-# Istio 服务网格——后 Kubernetes 时代的应用网络实践
+# Istio 服务网格——后 Kubernetes 时代的应用网络
 
 [Istio](https://istio.io) 是由 Google、IBM、Lyft 等共同开源的 Service Mesh（服务网格）框架，于2017 年开源。本书作为[《Kubernetes Handbook——Kubernetes 中文指南/云原生应用架构实践手册》](https://github.com/rootsongjc/kubernetes-handbook)的姊妹篇，希望读者在了解了 Kubernetes 的基础上阅读。
 
@@ -14,13 +14,13 @@
 - 服务网格概念解析
 - 控制平面和数据平面的原理
 - Istio 架构详解
-- Istio 进阶实战
+- 迁移到 Istio 服务网格
 - 基于 Istio 的自定义扩展
 
 本书基于 Istio 1.5+ 版本编写，您可以通过以下地址参与到本书的编写或阅读本书：
 
-- GitHub 地址：https://github.com/rootsongjc/istio-handbook
-- Gitbook 在线浏览：https://jimmysong.io/istio-handbook/
+- 自行构建：<https://github.com/rootsongjc/istio-handbook>
+- 在线浏览：<https://jimmysong.io/istio-handbook/>
 
 ## 致谢
 
@@ -28,7 +28,7 @@
 
 ## 版权与许可证
 
-本书版权归 Jimmy Song 所有， 您可以使用[署名 - 非商业性使用 - 相同方式共享 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)  协议共享。
+本书版权归 [Jimmy Song](https://jimmysong.io) 所有， 您可以使用[署名 - 非商业性使用 - 相同方式共享 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)  协议共享。
 
 ## 参与本书
 
