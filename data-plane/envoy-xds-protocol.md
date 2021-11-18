@@ -1,6 +1,6 @@
 # xDS 协议解析
 
-> 本文译自 [xDS REST and gRPC protocol](https://github.com/envoyproxy/data-plane-api/blob/master/XDS_PROTOCOL.md)，译者：狄卫华，审校：宋净超
+> 本文译自 [xDS REST and gRPC protocol](https://www.envoyproxy.io/docs/envoy/latest/api-docs/xds_protocol)，译者：狄卫华，审校：宋净超
 
 Envoy 通过查询文件或管理服务器来动态发现资源。概括地讲，对应的发现服务及其相应的 API 被称作 _xDS_。Envoy 通过订阅（_subscription_）方式来获取资源，如监控指定路径下的文件、启动 gRPC 流或轮询 REST-JSON URL。后两种方式会发送 [`DiscoveryRequest`](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/discovery.proto#discoveryrequest) 请求消息，发现的对应资源则包含在响应消息 [`DiscoveryResponse`](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/discovery.proto#discoveryresponse) 中。下面，我们将具体讨论每种订阅类型。
 
@@ -77,7 +77,7 @@ nonce: A
 
 Envoy 在处理 `DiscoveryResponse` 响应后，将通过流发送一个新的请求，请求包含应用成功的最后一个版本号和管理服务器提供的 `nonce`。如果本次更新已成功应用，则 `version_info` 的值设置为 __X__，如下序列图所示：
 
-![ACK 后的版本更新](https://ws1.sinaimg.cn/mw690/7e0ee03agy1fvmxs5aod1j20cc06y74c.jpg)
+![ACK 后的版本更新](../images/7e0ee03agy1fvmxs5aod1j20cc06y74c.jpg)
 
 在此序列图及后续中，将统一使用以下缩写格式：
 
@@ -88,11 +88,11 @@ Envoy 在处理 `DiscoveryResponse` 响应后，将通过流发送一个新的�
 
 版本为 Envoy 和管理服务器提供了共享当前应用配置的概念和通过 ACK/NACK 来进行配置更新的机制。如果 Envoy 拒绝配置更新 __X__，则回复 [`error_detail`](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/discovery.proto#envoy-api-field-discoveryrequest-error-detail) 及前一个的版本号，在当前情况下为空的初始版本号，`error_detail` 包含了有关错误的更加详细的信息：
 
-![NACK 无版本更新](https://ws1.sinaimg.cn/mw690/7e0ee03agy1fvmxtjqtcsj20cc06y0ss.jpg)
+![NACK 无版本更新](../images/7e0ee03agy1fvmxtjqtcsj20cc06y0ss.jpg)
 
 后续，API 更新可能会在新版本 __Y__ 上成功：
 
-![ACK 紧接着 NACK](https://ws1.sinaimg.cn/mw690/7e0ee03agy1fvmxtwzc96j20cc0923yp.jpg)
+![ACK 紧接着 NACK](../images/7e0ee03agy1fvmxtwzc96j20cc0923yp.jpg)
 
 每个流都有自己的版本概念，但不存在跨资源类型的共享版本。在不使用 ADS 的情况下，每个资源类型可能具有不同的版本，因为 Envoy API 允许指向不同的 EDS/RDS 资源配置并对应不同的 `ConfigSources`。
 
@@ -114,8 +114,9 @@ LDS/CDS 资源提示信息将始终为空，并且期望管理服务器的每个
 
 对于 EDS/RDS ，Envoy 可以为每个给定类型的资源生成不同的流（如每个 `ConfigSource` 都有自己的上游管理服务器的集群）或当指定资源类型的请求发送到同一个管理服务器的时候，允许将多个资源请求组合在一起发送。虽然可以单个实现，但管理服务器应具备处理每个给定资源类型中对单个或多个 `resource_names`  请求的能力。下面的两个序列图对于获取两个 EDS 资源都是有效的 `{foo，bar}`：
 
-![一个流上多个 EDS 请求](https://ws1.sinaimg.cn/mw690/7e0ee03agy1fvmxuviiqsj20eh06ymx9.jpg)
-![不同流上的多个 EDS 请求](https://ws1.sinaimg.cn/mw690/7e0ee03agy1fvmxv7cv21j20j20a4wet.jpg)
+![一个流上多个 EDS 请求](../images/7e0ee03agy1fvmxuviiqsj20eh06ymx9.jpg)
+
+![不同流上的多个 EDS 请求](../images/7e0ee03agy1fvmxv7cv21j20j20a4wet.jpg)
 
 #### 资源更新
 

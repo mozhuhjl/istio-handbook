@@ -2,7 +2,7 @@
 
 集群发现服务（CDS）是一个可选的 API，Envoy 将调用该 API 来动态获取 cluster manager 的成员。Envoy 还将根据 API 响应协调集群管理，根据需要完成添加、修改或删除已知的集群。
 
-关于 Envoy 是如何通过 CDS 从 `pilot-discovery` 服务中获取的 cluster 配置，请参考 [Service Mesh深度学习系列part3—istio源码分析之pilot-discovery模块分析（续）](http://www.servicemesher.com/blog/istio-service-mesh-source-code-pilot-discovery-module-deepin-part2)一文中的 CDS 服务部分。
+关于 Envoy 是如何通过 CDS 从 `pilot-discovery` 服务中获取的 cluster 配置，请参考 [Service Mesh深度学习系列part3—istio源码分析之pilot-discovery模块分析（续）](https://cloudnative.to/blog/istio-service-mesh-source-code-pilot-discovery-module-deepin-part2/)一文中的 CDS 服务部分。
 
 **注意**
 
@@ -28,5 +28,4 @@ CDS 的统计树以 `cluster_manager.cds.` 为根，统计如下：
 
 ## 参考
 
-- [Service Mesh深度学习系列part3—istio源码分析之pilot-discovery模块分析（续）- servicemesher.com](http://www.servicemesher.com/blog/istio-service-mesh-source-code-pilot-discovery-module-deepin-part2)
 - [Cluster discovery service - envoyproxy.io](https://www.envoyproxy.io/docs/envoy/latest/configuration/cluster_manager/cds)

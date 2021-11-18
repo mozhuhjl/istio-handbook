@@ -4,7 +4,7 @@
 
 ### 注意一
 
-该 API 的某些方面与 Istio 网络子系统的内部实现以及 Envoy 的 XDS API 有很深的关系。虽然 EnvoyFilter API 本身将保持向后兼容，但通过该机制提供的任何 Envoy 配置应在 Istio 代理版本升级时仔细审查，以确保废弃的字段被适当地删除和替换。
+该 API 的某些方面与 Istio 网络子系统的内部实现以及 Envoy 的 xDS API 有很深的关系。虽然 EnvoyFilter API 本身将保持向后兼容，但通过该机制提供的任何 Envoy 配置应在 Istio 代理版本升级时仔细审查，以确保废弃的字段被适当地删除和替换。
 
 ### 注意二
 
@@ -264,9 +264,7 @@ metadata:
   namespace: myns
 spec:
   configPatches:
-
 # 第一个补丁定义了一个 Wasm 扩展，并提供了一个 URL 来获取 Wasm 二进制文件，以及二进制配置。它应该出现在应用它的下一个补丁之前。这个资源对命名空间 "myns" 中的所有代理是可见的。有可能在多个命名空间为同一名称 "my-wasm-extension" 提供多个定义。我们建议，如果需要覆盖，那么可以用 REPLACE 覆盖每个命名空间的根级定义；如果不需要覆盖，那么这个名字应该用命名空间 "myns/my-wasm-extension" 来限定，以避免意外的名字冲突。
-
   - applyTo: EXTENSION_CONFIG
     patch:
       operation: ADD # REPLACE is also supported, and would override a cluster level resource with the same name.

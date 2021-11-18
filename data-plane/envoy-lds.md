@@ -6,7 +6,7 @@ Listener 更新的语义如下：
 
 - 每个 Listener 必须有一个独特的[名字](https://www.envoyproxy.io/docs/envoy/latest/api-v1/listeners/listeners.md#config-listeners-name)。如果没有提供名称，Envoy 将创建一个 UUID。要动态更新的 Listener ，管理服务必须提供 Listener 的唯一名称。
 - 当一个 Listener 被添加，在参与连接处理之前，会先进入“预热”阶段。例如，如果 Listener 引用 [RDS](http://www.servicemesher.com/envoy/configuration/http_conn_man/rds.html#config-http-conn-man-rds) 配置，那么在 Listener 迁移到 “active” 之前，将会解析并提取该配置。
-- Listener 一旦创建，实际上就会保持不变。因此，更新 Listener 时，会创建一个全新的 Listener （使用相同的侦听套接字）。新增加的监听者都会通过上面所描述的相同“预热”过程。
+- Listener 一旦创建，实际上就会保持不变。因此，更新 Listener 时，会创建一个全新的 Listener （使用相同的监听套接字）。新增加的 Listener 都会通过上面所描述的相同“预热”过程。
 - 当更新或删除 Listener 时，旧的 Listener 将被置于 “draining（逐出）” 状态，就像整个服务重新启动时一样。Listener 移除之后，该 Listener 所拥有的连接，经过一段时间优雅地关闭（如果可能的话）剩余的连接。逐出时间通过 [`--drain-time-s`](http://www.servicemesher.com/envoy/operations/cli.html#cmdoption-drain-time-s) 选项设置。
 
 **注意**
@@ -31,4 +31,3 @@ LDS 的统计树是以 `listener_manager.lds` 为根，统计如下：
 ## 参考
 
 - [Listener discovery service(LDS) - envoyproxy.io](https://www.envoyproxy.io/docs/envoy/latest/configuration/listeners/lds)
-- [监听器发现服务（LDS）- servicemesher.com](http://www.servicemesher.com/envoy/configuration/listeners/lds.html)
