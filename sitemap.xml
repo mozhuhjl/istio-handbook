@@ -45,6 +45,8 @@
 <url> <loc>https://jimmysong.io/istio-handbook/config/security/request-authentication.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/config/security/peer-authentication.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/config/security/jwt.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://jimmysong.io/istio-handbook/ecosystem/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://jimmysong.io/istio-handbook/ecosystem/slime.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/develop/istio-dev-env.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/action/bookinfo-sample.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
