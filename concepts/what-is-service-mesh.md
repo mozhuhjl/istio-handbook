@@ -61,26 +61,6 @@ Service mesh 又译作 “服务网格”，作为服务间通信的基础设施
 
 在云原生架构下，容器的使用给予了异构应用程序的更多可行性，Kubernetes 增强的应用的横向扩容能力，用户可以快速的编排出复杂环境、复杂依赖关系的应用程序，同时开发者又无须过分关心应用程序的监控、扩展性、服务发现和分布式追踪这些繁琐的事情而专注于程序开发，赋予开发者更多的创造性。
 
-## 服务网格全景图
-
-Service Mesh 的概念于 2016 年诞生至今仍在蓬勃发展，下面是部分服务网格或周边开源项目表：
-
-- [amalgam8](https://github.com/amalgam8/amalgam8) - 用于异构微服务的基于版本的路由网格
-- [ambassador](https://github.com/datawire/ambassador) - 开源的基于 Envoy proxy 构建的用于微服务的 Kubernetes 原生 API 网关
-- [aspen-mesh](https://github.com/aspenmesh) - 隶属于 F5 的公司开发的 Service Mesh
-- [conduit](https://conduit.io/) - 适用于 Kubernetes 的轻量级 Service Mesh
-- [consul](https://github.com/hashicorp/consul) - Consul 一种分布式、高可用的和数据中心感知解决方案，用于跨动态分布式基础架构连接和配置应用程序。<>
-- [dubbo](https://github.com/apache/incubator-dubbo) - Apache Dubbo™ (incubating)是一款高性能Java RPC框架。
-- [envoy](https://github.com/envoyproxy/envoy) - C++ 前端/服务代理
-- [istio](https://github.com/istio) - 用于连接、保护、控制和观测服务。
-- [kong](https://github.com/Kong/kong) - 云原生 API 网关 <https://konghq.com/install>
-- [linkerd](https://github.com/linkerd/linkerd) - 云原生应用的开源 Service Mesh [https://linkerd.io](https://linkerd.io/)
-- [mesher](https://github.com/go-mesh/mesher) - 华为开源的基于轻量级基于 [go chassis](https://github.com/ServiceComb/go-chassis) 的 Service Mesh。
-- [mosn](https://github.com/mosn/mosn) - MOSN是由蚂蚁金服开源的一个模块化可观测的智能网络，可用作为 sidecar 部署在 Service Mesh 中。
-- [nginmesh](https://github.com/nginmesh/nginmesh) - 基于 Nginx 的 Service Mesh
-- [servicecomb](https://github.com/ServiceComb) - ServiceComb 是华为开源的微服务框架，提供便捷的在云中开发和部署应用的方式。
-- [tars](https://github.com/Tencent/Tars) - Tars 是腾讯开源的基于名称服务的高性能 RPC 框架。使用 tars 协议并提供半自动化运维平台。
-
 ## 参考
 
 - [Istio: A service mesh for AWS ECS - medium.com](https://medium.com/attest-engineering/Istio-a-service-mesh-for-aws-ecs-937f201f847a)

@@ -66,7 +66,9 @@
 ## Istio 生态
 
 - [Istio 生态概述](ecosystem/index.md)
-- [Slime——基于 Istio 的智能服务网格管理器](ecosystem/slime.md)
+- 扩展
+  - [Slime——基于 Istio 的智能服务网格管理器](ecosystem/slime.md)
+
 
 ## 开发指南
 

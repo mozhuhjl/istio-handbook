@@ -303,7 +303,7 @@ spec:
 
 **查看 pod 中 Envoy sidecar 的启动配置信息**
 
-[Bootstrap](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-msg-config-bootstrap-v2-bootstrap) 消息是 Envoy 配置的根本来源，[Bootstrap](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-msg-config-bootstrap-v2-bootstrap) 消息的一个关键的概念是静态和动态资源的之间的区别。例如 [Listener](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/lds.proto.html#envoy-api-msg-listener) 或 [Cluster](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cds.proto.html#envoy-api-msg-cluster) 这些资源既可以从 [static_resources](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-field-config-bootstrap-v2-bootstrap-static-resources) 静态的获得也可以从 [dynamic_resources](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-field-config-bootstrap-v2-bootstrap-dynamic-resources) 中配置的  LDS 或 CDS 之类的 xDS 服务获取。关于 xDS 服务的详解请参考 [Envoy 中的 xDS REST 和 gRPC 协议详解](http://www.servicemesher.com/blog/envoy-xds-protocol/)。
+[Bootstrap](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-msg-config-bootstrap-v2-bootstrap) 消息是 Envoy 配置的根本来源，[Bootstrap](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-msg-config-bootstrap-v2-bootstrap) 消息的一个关键的概念是静态和动态资源的之间的区别。例如 [Listener](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/lds.proto.html#envoy-api-msg-listener) 或 [Cluster](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cds.proto.html#envoy-api-msg-cluster) 这些资源既可以从 [static_resources](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-field-config-bootstrap-v2-bootstrap-static-resources) 静态的获得也可以从 [dynamic_resources](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-field-config-bootstrap-v2-bootstrap-dynamic-resources) 中配置的  LDS 或 CDS 之类的 xDS 服务获取。关于 xDS 服务的详解请参考 [Envoy 中的 xDS REST 和 gRPC 协议详解](https://cloudnative.to/blog/envoy-xds-protocol/)。
 
 ```bash
 $ istioctl proxy-config bootstrap productpage-v1-745ffc55b7-2l2lw -o json
@@ -517,6 +517,6 @@ reviews.default.svc.cluster.local                           9080      v3        
 - [流量管理 - istio.io](https://istio.io/zh/docs/concepts/traffic-management/)
 - [通信路由 - istio.io](https://istio.io/zh/docs/reference/config/istio.networking.v1alpha3/)
 - [istioctl 指南 - istio.io](https://istio.io/zh/docs/reference/commands/istioctl/)
-- [Envoy 官方文档中文版 - servicemesher.com](http://www.servicemesher.com/envoy/)
-- [Envoy v2 API 概览 - servicemesher.com](http://www.servicemesher.com/envoy/configuration/overview/v2_overview.html)
-- [Envoy 中的 xDS REST 和 gRPC 协议详解 - servicemesher.com](http://www.servicemesher.com/blog/envoy-xds-protocol/)
+- [Envoy 官方文档中文版 - cloudnative.to](https://cloudnative.to/envoy/)
+- [Envoy v2 API 概览 - cloudnative.to](https://cloudnative.to/envoy/configuration/overview/v2_overview.html)
+- [Envoy 中的 xDS REST 和 gRPC 协议详解 - servicemesher.com](https://cloudnative.to/blog/envoy-xds-protocol/)

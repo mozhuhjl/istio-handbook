@@ -22,4 +22,4 @@
 
 ## 参考
 
-- [Envoy 的架构与基本术语 - jimmysong.io](https://jimmysong.io/posts/envoy-archiecture-and-terminology/)
+- [Envoy 的架构与基本术语 - jimmysong.io](https://jimmysong.io/blog/envoy-archiecture-and-terminology/)
