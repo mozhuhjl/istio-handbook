@@ -27,7 +27,10 @@
         "-highlight", "prism", "prism-themes",
         "sitemap-general",
         "lightbox",
-        "ga"
+        "ga",
+        "hide-element",
+        "expandable-chapters-small",
+        "insert-logo"
     ],
     "pluginsConfig": {
         "theme-default": {
@@ -41,7 +44,7 @@
             "label": "编辑本页"
         },
         "image-captions": {
-            "caption": "图片 - _CAPTION_"
+            "caption": "图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_"
         },
         "github-buttons": {
             "repo": "rootsongjc/istio-handbook",
@@ -49,7 +52,7 @@
             "size": "small"
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © 2021 | Distributed under <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY 4.0</a> | <a href=https://jimmysong.io>jimmysong.io</a>",
+            "copyright": "Copyright © 2017-2022 | Distributed under <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY 4.0</a> | <a href=https://jimmysong.io>jimmysong.io</a>",
             "modify_label": " Updated at ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
@@ -66,6 +69,13 @@
         },
         "ga": {
             "token": "UA-93485976-1"
+        },
+        "hide-element": {
+            "elements": [".gitbook-link"]
+        },
+        "insert-logo": {
+            "url": "https://jimmysong.io/images/logo-black-text.png",
+            "style": "background: none; max-height: 100px; min-height: 30px"
         }
     }
 }

@@ -17,14 +17,14 @@
 - 迁移到 Istio 服务网格
 - 构建云原生应用网络
 
-本书基于 Istio 1.12+ 版本编写，您可以通过以下地址参与到本书的编写或阅读本书：
+本书基于 Istio 1.13 版本编写，您可以通过以下地址参与到本书的编写或阅读本书：
 
 - 自行构建：<https://github.com/rootsongjc/istio-handbook>
 - 在线浏览：<https://jimmysong.io/istio-handbook/>
 
 ## 致谢
 
-感谢 [ServiceMesher](https://www.servicemesher.com) 及[云原生社区 Istio SIG](https://i.cloudnative.to/istio/) 先后负责翻译了 [Envoy](https://cloudnative.to/envoy/) 及 [Istio](https://istio.io/latest/zh/) 官方文档，为本书的成书提供了大量参考资料，其他引用的内容在每节最后的「参考」一栏中列出。
+感谢 [ServiceMesher](https://www.servicemesher.com) 及[云原生社区](https://cloudnative.to/) 先后负责翻译了 [Envoy](https://cloudnative.to/envoy/) 及 [Istio](https://istio.io/latest/zh/) 官方文档，为本书的成书提供了大量参考资料，其他引用的内容在每节最后的「参考」一栏中列出。
 
 ## 版权与许可证
 

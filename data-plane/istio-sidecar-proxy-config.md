@@ -8,7 +8,7 @@ kubectl -n default exec ratings-v1-7c9949d479-dwkr4 -c istio-proxy curl http://l
 
 将 Envoy 的运行时配置 dump 出来之后你将看到一个长 6000 余行的配置文件。关于该配置文件的介绍请参考 [Envoy v2 API 概览](http://www.servicemesher.com/envoy/configuration/overview/v2_overview.html)。
 
-下图展示的是 Enovy 的配置。
+下图展示的是 Envoy 的配置。
 
 ![Envoy 配置](../images/006tNbRwly1fyb74brsd5j30xg0lojvt.jpg)
 

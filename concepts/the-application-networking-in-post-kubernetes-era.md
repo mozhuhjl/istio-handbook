@@ -60,13 +60,13 @@ Istio Gateway 的功能与 Kubernetes Ingress 类似，它负责进出集群的�
 
 ## Envoy
 
-Envoy 是 Istio 中默认的 sidecar 代理。Istio 基于 Enovy 的 xDS 协议扩展了其控制平面。在讨论 Envoy 的 xDS 协议之前，我们需要先熟悉 Envoy 的基本术语。以下是 Envoy 中的基本术语及其数据结构的列表，更多细节请参考 [Envoy 文档](https://envoyproxy.io/)。
+Envoy 是 Istio 中默认的 sidecar 代理。Istio 基于 Envoy 的 xDS 协议扩展了其控制平面。在讨论 Envoy 的 xDS 协议之前，我们需要先熟悉 Envoy 的基本术语。以下是 Envoy 中的基本术语及其数据结构的列表，更多细节请参考 [Envoy 文档](https://envoyproxy.io/)。
 
 ![Envoy proxy 架构图](../images/envoy-arch.jpg)
 
 ### 基本术语
 
-下面是您应该了解的 Enovy 里的基本术语：
+下面是您应该了解的 Envoy 里的基本术语：
 
 - **Downstream（下游）**：下游主机连接到 Envoy，发送请求并接收响应，即发送请求的主机。
 - **Upstream（上游）**：上游主机接收来自 Envoy 的连接和请求，并返回响应，即接受请求的主机。
