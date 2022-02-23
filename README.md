@@ -19,8 +19,8 @@
 
 本书基于 Istio 1.13 版本编写，您可以通过以下地址参与到本书的编写或阅读本书：
 
-- 自行构建：<https://github.com/rootsongjc/istio-handbook>
-- 在线浏览：<https://jimmysong.io/istio-handbook/>
+- [自行构建](https://github.com/rootsongjc/istio-handbook)
+- [在线浏览](https://jimmysong.io/istio-handbook/)（推荐）
 
 ## 致谢
 
