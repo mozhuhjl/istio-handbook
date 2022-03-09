@@ -134,7 +134,7 @@
     
         
         <li>
-            <a href="https://cloudnative.to/" target="_blank" class="custom-link">云原生社区</a>
+            <a href="https://cloudnative.to" target="_blank" class="custom-link">云原生社区</a>
         </li>
     
         
@@ -144,7 +144,12 @@
     
         
         <li>
-            <a href="https://jimmysong.io/kubernetes-handbook/" target="_blank" class="custom-link">Kubernetes中文指南/云原生应用架构实践手册 by Jimmy Song(宋净超)</a>
+            <a href="https://jimmysong.io/envoy-handbook/" target="_blank" class="custom-link">Envoy 基础教程</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://jimmysong.io/kubernetes-handbook/" target="_blank" class="custom-link">Kubernetes 中文指南</a>
         </li>
     
     
@@ -155,7 +160,7 @@
 
     
         
-        <li class="header">前言</li>
+        <li class="header">服务网格概述</li>
         
         
     
@@ -174,19 +179,12 @@
             
         </li>
     
-
-    
-        
-        <li class="header">概念原理</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../concepts/what-is-service-mesh.html">
+        <li class="chapter " data-level="1.2" data-path="../concepts/what-is-service-mesh.html">
             
                 <a href="../concepts/what-is-service-mesh.html">
             
                     
-                        <b>2.1.</b>
+                        <b>1.2.</b>
                     
                     什么是服务网格？
             
@@ -196,12 +194,27 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../concepts/the-application-networking-in-post-kubernetes-era.html">
+        <li class="chapter " data-level="1.3" data-path="../concepts/why-service-mesh.html">
+            
+                <a href="../concepts/why-service-mesh.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    为什么要使用服务网格？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../concepts/the-application-networking-in-post-kubernetes-era.html">
             
                 <a href="../concepts/the-application-networking-in-post-kubernetes-era.html">
             
                     
-                        <b>2.2.</b>
+                        <b>1.4.</b>
                     
                     后 Kubernetes 时代的应用网络
             
@@ -211,12 +224,34 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../concepts/service-mesh-architectures.html">
+
+    
+        
+        <li class="header">概念原理</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../concepts/">
+            
+                <a href="../concepts/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    概念原理概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../concepts/service-mesh-architectures.html">
             
                 <a href="../concepts/service-mesh-architectures.html">
             
                     
-                        <b>2.3.</b>
+                        <b>2.2.</b>
                     
                     服务网格架构
             
@@ -227,12 +262,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="../concepts/service-mesh-patterns.html">
+        <li class="chapter " data-level="2.2.1" data-path="../concepts/service-mesh-patterns.html">
             
                 <a href="../concepts/service-mesh-patterns.html">
             
                     
-                        <b>2.3.1.</b>
+                        <b>2.2.1.</b>
                     
                     服务网格的实现模式
             
@@ -242,12 +277,27 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="../concepts/istio-architecture.html">
+        <li class="chapter " data-level="2.2.2" data-path="../concepts/istio-intro.html">
+            
+                <a href="../concepts/istio-intro.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    Istio 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../concepts/istio-architecture.html">
             
                 <a href="../concepts/istio-architecture.html">
             
                     
-                        <b>2.3.2.</b>
+                        <b>2.2.3.</b>
                     
                     Istio 架构解析
             
@@ -262,12 +312,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="../concepts/sidecar-pattern.html">
+        <li class="chapter " data-level="2.3" data-path="../concepts/sidecar-pattern.html">
             
                 <a href="../concepts/sidecar-pattern.html">
             
                     
-                        <b>2.4.</b>
+                        <b>2.3.</b>
                     
                     Sidecar 模式
             
@@ -278,12 +328,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.4.1" data-path="../concepts/sidecar-injection-deep-dive.html">
+        <li class="chapter " data-level="2.3.1" data-path="../concepts/sidecar-injection-deep-dive.html">
             
                 <a href="../concepts/sidecar-injection-deep-dive.html">
             
                     
-                        <b>2.4.1.</b>
+                        <b>2.3.1.</b>
                     
                     Istio 中的 Sidecar 注入与流量劫持详解
             
@@ -293,12 +343,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="../concepts/istio-sidecar-injector.html">
+        <li class="chapter " data-level="2.3.2" data-path="../concepts/istio-sidecar-injector.html">
             
                 <a href="../concepts/istio-sidecar-injector.html">
             
                     
-                        <b>2.4.2.</b>
+                        <b>2.3.2.</b>
                     
                     Sidecar 的自动注入过程详解
             
@@ -313,12 +363,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="../concepts/traffic-management.html">
+        <li class="chapter " data-level="2.4" data-path="../concepts/traffic-management.html">
             
                 <a href="../concepts/traffic-management.html">
             
                     
-                        <b>2.5.</b>
+                        <b>2.4.</b>
                     
                     流量管理
             
@@ -329,12 +379,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.5.1" data-path="../concepts/traffic-management-basic.html">
+        <li class="chapter " data-level="2.4.1" data-path="../concepts/traffic-management-basic.html">
             
                 <a href="../concepts/traffic-management-basic.html">
             
                     
-                        <b>2.5.1.</b>
+                        <b>2.4.1.</b>
                     
                     流量管理基础概念
             
@@ -344,50 +394,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.2" data-path="../concepts/sidecar-traffic-routing-deep-dive.html">
+        <li class="chapter " data-level="2.4.2" data-path="../concepts/sidecar-traffic-routing-deep-dive.html">
             
                 <a href="../concepts/sidecar-traffic-routing-deep-dive.html">
             
                     
-                        <b>2.5.2.</b>
+                        <b>2.4.2.</b>
                     
                     Istio 中的 Sidecar 的流量路由详解
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="2.6" >
-            
-                <span>
-            
-                    
-                        <b>2.6.</b>
-                    
-                    安全
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="2.6.1" data-path="../concepts/mtls.html">
-            
-                <a href="../concepts/mtls.html">
-            
-                    
-                        <b>2.6.1.</b>
-                    
-                    mTLS
             
                 </a>
             
@@ -407,12 +421,27 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="envoy-terminology.html">
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    数据平面概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="envoy-terminology.html">
             
                 <a href="envoy-terminology.html">
             
                     
-                        <b>3.1.</b>
+                        <b>3.2.</b>
                     
                     Envoy 中的基本术语
             
@@ -422,12 +451,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="istio-sidecar-proxy-config.html">
+        <li class="chapter " data-level="3.3" data-path="istio-sidecar-proxy-config.html">
             
                 <a href="istio-sidecar-proxy-config.html">
             
                     
-                        <b>3.2.</b>
+                        <b>3.3.</b>
                     
                     Istio sidecar proxy 配置
             
@@ -437,12 +466,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="envoy-proxy-config-deep-dive.html">
+        <li class="chapter active" data-level="3.4" data-path="envoy-proxy-config-deep-dive.html">
             
                 <a href="envoy-proxy-config-deep-dive.html">
             
                     
-                        <b>3.3.</b>
+                        <b>3.4.</b>
                     
                     Envoy proxy 配置详解
             
@@ -452,12 +481,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="envoy-api.html">
+        <li class="chapter " data-level="3.5" data-path="envoy-api.html">
             
                 <a href="envoy-api.html">
             
                     
-                        <b>3.4.</b>
+                        <b>3.5.</b>
                     
                     Envoy API
             
@@ -467,12 +496,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="envoy-xds-protocol.html">
+        <li class="chapter " data-level="3.6" data-path="envoy-xds-protocol.html">
             
                 <a href="envoy-xds-protocol.html">
             
                     
-                        <b>3.5.</b>
+                        <b>3.6.</b>
                     
                     xDS 协议解析
             
@@ -483,12 +512,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.5.1" data-path="envoy-lds.html">
+        <li class="chapter " data-level="3.6.1" data-path="envoy-lds.html">
             
                 <a href="envoy-lds.html">
             
                     
-                        <b>3.5.1.</b>
+                        <b>3.6.1.</b>
                     
                     LDS（监听器发现服务）
             
@@ -498,12 +527,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.2" data-path="envoy-rds.html">
+        <li class="chapter " data-level="3.6.2" data-path="envoy-rds.html">
             
                 <a href="envoy-rds.html">
             
                     
-                        <b>3.5.2.</b>
+                        <b>3.6.2.</b>
                     
                     RDS（路由发现服务）
             
@@ -513,12 +542,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.3" data-path="envoy-cds.html">
+        <li class="chapter " data-level="3.6.3" data-path="envoy-cds.html">
             
                 <a href="envoy-cds.html">
             
                     
-                        <b>3.5.3.</b>
+                        <b>3.6.3.</b>
                     
                     CDS（集群发现服务）
             
@@ -528,12 +557,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.4" data-path="envoy-eds.html">
+        <li class="chapter " data-level="3.6.4" data-path="envoy-eds.html">
             
                 <a href="envoy-eds.html">
             
                     
-                        <b>3.5.4.</b>
+                        <b>3.6.4.</b>
                     
                     EDS（端点发现服务）
             
@@ -543,12 +572,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.5" data-path="envoy-sds.html">
+        <li class="chapter " data-level="3.6.5" data-path="envoy-sds.html">
             
                 <a href="envoy-sds.html">
             
                     
-                        <b>3.5.5.</b>
+                        <b>3.6.5.</b>
                     
                     SDS（秘钥发现服务）
             
@@ -558,12 +587,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.6" data-path="envoy-ads.html">
+        <li class="chapter " data-level="3.6.6" data-path="envoy-ads.html">
             
                 <a href="envoy-ads.html">
             
                     
-                        <b>3.5.6.</b>
+                        <b>3.6.6.</b>
                     
                     ADS（聚合发现服务）
             
@@ -573,72 +602,6 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.7" data-path="envoy-hds.html">
-            
-                <a href="envoy-hds.html">
-            
-                    
-                        <b>3.5.7.</b>
-                    
-                    HDS（健康发现服务）
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6" data-path="envoy-advance-api.html">
-            
-                <a href="envoy-advance-api.html">
-            
-                    
-                        <b>3.6.</b>
-                    
-                    Envoy 高级 API
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.6.1" data-path="envoy-ms.html">
-            
-                <a href="envoy-ms.html">
-            
-                    
-                        <b>3.6.1.</b>
-                    
-                    MS（Metric 服务）
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6.2" data-path="envoy-rls.html">
-            
-                <a href="envoy-rls.html">
-            
-                    
-                        <b>3.6.2.</b>
-                    
-                    RLS（速率限制服务）
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -647,25 +610,18 @@
 
     
         
-        <li class="header">控制平面</li>
+        <li class="header">安装</li>
         
         
     
-
-    
-        
-        <li class="header">安装指南</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../setup/quick-start.html">
+        <li class="chapter " data-level="4.1" data-path="../setup/">
             
-                <a href="../setup/quick-start.html">
+                <a href="../setup/">
             
                     
-                        <b>5.1.</b>
+                        <b>4.1.</b>
                     
-                    快速开始
+                    安装概述
             
                 </a>
             
@@ -673,14 +629,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../setup/istio-installation.html">
+        <li class="chapter " data-level="4.2" data-path="../setup/istio-installation.html">
             
                 <a href="../setup/istio-installation.html">
             
                     
-                        <b>5.2.</b>
+                        <b>4.2.</b>
                     
-                    Istio 安装
+                    安装 Istio
             
                 </a>
             
@@ -688,14 +644,44 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../setup/istio-observability-tool-kiali.html">
+        <li class="chapter " data-level="4.3" data-path="../setup/getmesh.html">
+            
+                <a href="../setup/getmesh.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    GetMesh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../setup/istio-observability-tool-kiali.html">
             
                 <a href="../setup/istio-observability-tool-kiali.html">
             
                     
-                        <b>5.3.</b>
+                        <b>4.4.</b>
                     
                     可观察性工具 kiali
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../setup/bookinfo-sample.html">
+            
+                <a href="../setup/bookinfo-sample.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Bookinfo 示例
             
                 </a>
             
@@ -710,14 +696,14 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../config/networking/">
+        <li class="chapter " data-level="5.1" data-path="../config/networking/">
             
                 <a href="../config/networking/">
             
                     
-                        <b>6.1.</b>
+                        <b>5.1.</b>
                     
-                    流量管理
+                    流量管理配置概述
             
                 </a>
             
@@ -726,12 +712,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1.1" data-path="../config/networking/virtual-service.html">
+        <li class="chapter " data-level="5.1.1" data-path="../config/networking/virtual-service.html">
             
                 <a href="../config/networking/virtual-service.html">
             
                     
-                        <b>6.1.1.</b>
+                        <b>5.1.1.</b>
                     
                     VirtualService
             
@@ -741,12 +727,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.2" data-path="../config/networking/destination-rule.html">
+        <li class="chapter " data-level="5.1.2" data-path="../config/networking/destination-rule.html">
             
                 <a href="../config/networking/destination-rule.html">
             
                     
-                        <b>6.1.2.</b>
+                        <b>5.1.2.</b>
                     
                     DestinationRule
             
@@ -756,12 +742,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.3" data-path="../config/networking/gateway.html">
+        <li class="chapter " data-level="5.1.3" data-path="../config/networking/gateway.html">
             
                 <a href="../config/networking/gateway.html">
             
                     
-                        <b>6.1.3.</b>
+                        <b>5.1.3.</b>
                     
                     Gateway
             
@@ -771,12 +757,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.4" data-path="../config/networking/envoy-filter.html">
+        <li class="chapter " data-level="5.1.4" data-path="../config/networking/envoy-filter.html">
             
                 <a href="../config/networking/envoy-filter.html">
             
                     
-                        <b>6.1.4.</b>
+                        <b>5.1.4.</b>
                     
                     EnvoyFilter
             
@@ -786,12 +772,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.5" data-path="../config/networking/sidecar.html">
+        <li class="chapter " data-level="5.1.5" data-path="../config/networking/sidecar.html">
             
                 <a href="../config/networking/sidecar.html">
             
                     
-                        <b>6.1.5.</b>
+                        <b>5.1.5.</b>
                     
                     Sidecar
             
@@ -801,12 +787,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.6" data-path="../config/networking/service-entry.html">
+        <li class="chapter " data-level="5.1.6" data-path="../config/networking/service-entry.html">
             
                 <a href="../config/networking/service-entry.html">
             
                     
-                        <b>6.1.6.</b>
+                        <b>5.1.6.</b>
                     
                     ServiceEntry
             
@@ -816,12 +802,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.7" data-path="../config/networking/workload-entry.html">
+        <li class="chapter " data-level="5.1.7" data-path="../config/networking/workload-entry.html">
             
                 <a href="../config/networking/workload-entry.html">
             
                     
-                        <b>6.1.7.</b>
+                        <b>5.1.7.</b>
                     
                     WorkloadEntry
             
@@ -831,12 +817,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.8" data-path="../config/networking/workload-group.html">
+        <li class="chapter " data-level="5.1.8" data-path="../config/networking/workload-group.html">
             
                 <a href="../config/networking/workload-group.html">
             
                     
-                        <b>6.1.8.</b>
+                        <b>5.1.8.</b>
                     
                     WorkloadGroup
             
@@ -851,14 +837,14 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../config/security/">
+        <li class="chapter " data-level="5.2" data-path="../config/security/">
             
                 <a href="../config/security/">
             
                     
-                        <b>6.2.</b>
+                        <b>5.2.</b>
                     
-                    安全
+                    安全配置概述
             
                 </a>
             
@@ -867,12 +853,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.2.1" data-path="../config/security/authorization-policy.html">
+        <li class="chapter " data-level="5.2.1" data-path="../config/security/authorization-policy.html">
             
                 <a href="../config/security/authorization-policy.html">
             
                     
-                        <b>6.2.1.</b>
+                        <b>5.2.1.</b>
                     
                     AuthorizationPolicy
             
@@ -882,12 +868,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2.2" data-path="../config/security/request-authentication.html">
+        <li class="chapter " data-level="5.2.2" data-path="../config/security/request-authentication.html">
             
                 <a href="../config/security/request-authentication.html">
             
                     
-                        <b>6.2.2.</b>
+                        <b>5.2.2.</b>
                     
                     RequestAuthentication
             
@@ -897,12 +883,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2.3" data-path="../config/security/peer-authentication.html">
+        <li class="chapter " data-level="5.2.3" data-path="../config/security/peer-authentication.html">
             
                 <a href="../config/security/peer-authentication.html">
             
                     
-                        <b>6.2.3.</b>
+                        <b>5.2.3.</b>
                     
                     PeerAuthentication
             
@@ -912,12 +898,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2.4" data-path="../config/security/jwt.html">
+        <li class="chapter " data-level="5.2.4" data-path="../config/security/jwt.html">
             
                 <a href="../config/security/jwt.html">
             
                     
-                        <b>6.2.4.</b>
+                        <b>5.2.4.</b>
                     
                     JWTRule
             
@@ -935,16 +921,471 @@
 
     
         
+        <li class="header">流量管理</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../traffic-management/">
+            
+                <a href="../traffic-management/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    流量管理概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../traffic-management/gateway.html">
+            
+                <a href="../traffic-management/gateway.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../traffic-management/basic-routing.html">
+            
+                <a href="../traffic-management/basic-routing.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    基本路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../traffic-management/subset-and-destinationrule.html">
+            
+                <a href="../traffic-management/subset-and-destinationrule.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    Subset 和 DestinationRule
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../traffic-management/resiliency.html">
+            
+                <a href="../traffic-management/resiliency.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    弹性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../traffic-management/fault-injection.html">
+            
+                <a href="../traffic-management/fault-injection.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    错误注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../traffic-management/advanced-routing.html">
+            
+                <a href="../traffic-management/advanced-routing.html">
+            
+                    
+                        <b>6.7.</b>
+                    
+                    高级路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../traffic-management/seviceentry.html">
+            
+                <a href="../traffic-management/seviceentry.html">
+            
+                    
+                        <b>6.8.</b>
+                    
+                    ServiceEntry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="../traffic-management/sidecar.html">
+            
+                <a href="../traffic-management/sidecar.html">
+            
+                    
+                        <b>6.9.</b>
+                    
+                    Sidecar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="../traffic-management/envoyfilter.html">
+            
+                <a href="../traffic-management/envoyfilter.html">
+            
+                    
+                        <b>6.10.</b>
+                    
+                    EnvoyFilter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">可观察性</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../observability/">
+            
+                <a href="../observability/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    可观察性概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../observability/prometheus.html">
+            
+                <a href="../observability/prometheus.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../observability/grafana.html">
+            
+                <a href="../observability/grafana.html">
+            
+                    
+                        <b>7.3.</b>
+                    
+                    Grafana
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../observability/zipkin.html">
+            
+                <a href="../observability/zipkin.html">
+            
+                    
+                        <b>7.4.</b>
+                    
+                    Zipkin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../observability/kiali.html">
+            
+                <a href="../observability/kiali.html">
+            
+                    
+                        <b>7.5.</b>
+                    
+                    Kiali
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">安全</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../security/">
+            
+                <a href="../security/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    安全概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../security/authn.html">
+            
+                <a href="../security/authn.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../security/peer-and-request-authn.html">
+            
+                <a href="../security/peer-and-request-authn.html">
+            
+                    
+                        <b>8.3.</b>
+                    
+                    对等认证和请求认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../security/mtls.html">
+            
+                <a href="../security/mtls.html">
+            
+                    
+                        <b>8.4.</b>
+                    
+                    mTLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../security/authz.html">
+            
+                <a href="../security/authz.html">
+            
+                    
+                        <b>8.5.</b>
+                    
+                    授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">高级功能</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../advanced/">
+            
+                <a href="../advanced/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    高级功能概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../advanced/multicluster-deployment.html">
+            
+                <a href="../advanced/multicluster-deployment.html">
+            
+                    
+                        <b>9.2.</b>
+                    
+                    多集群部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../advanced/vm.html">
+            
+                <a href="../advanced/vm.html">
+            
+                    
+                        <b>9.3.</b>
+                    
+                    虚拟机负载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">问题排查</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../troubleshooting/">
+            
+                <a href="../troubleshooting/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    问题排查概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../troubleshooting/envoy-basic.html">
+            
+                <a href="../troubleshooting/envoy-basic.html">
+            
+                    
+                        <b>10.2.</b>
+                    
+                    Envoy 基础问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../troubleshooting/envoy-sample.html">
+            
+                <a href="../troubleshooting/envoy-sample.html">
+            
+                    
+                        <b>10.3.</b>
+                    
+                    Envoy 示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../troubleshooting/checklist.html">
+            
+                <a href="../troubleshooting/checklist.html">
+            
+                    
+                        <b>10.4.</b>
+                    
+                    调试清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../troubleshooting/istio-dev-env.html">
+            
+                <a href="../troubleshooting/istio-dev-env.html">
+            
+                    
+                        <b>10.5.</b>
+                    
+                    Istio 开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
         <li class="header">Istio 生态</li>
         
         
     
-        <li class="chapter " data-level="7.1" data-path="../ecosystem/">
+        <li class="chapter " data-level="11.1" data-path="../ecosystem/">
             
                 <a href="../ecosystem/">
             
                     
-                        <b>7.1.</b>
+                        <b>11.1.</b>
                     
                     Istio 生态概述
             
@@ -954,57 +1395,14 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" >
-            
-                <span>
-            
-                    
-                        <b>7.2.</b>
-                    
-                    扩展
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="7.2.1" data-path="../ecosystem/slime.html">
+        <li class="chapter " data-level="11.2" data-path="../ecosystem/slime.html">
             
                 <a href="../ecosystem/slime.html">
             
                     
-                        <b>7.2.1.</b>
+                        <b>11.2.</b>
                     
-                    Slime——基于 Istio 的智能服务网格管理器
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-        
-        <li class="header">开发指南</li>
-        
-        
-    
-        <li class="chapter " data-level="8.1" data-path="../develop/istio-dev-env.html">
-            
-                <a href="../develop/istio-dev-env.html">
-            
-                    
-                        <b>8.1.</b>
-                    
-                    Istio 开发环境配置
+                    Slime
             
                 </a>
             
@@ -1019,14 +1417,104 @@
         
         
     
-        <li class="chapter " data-level="9.1" data-path="../action/bookinfo-sample.html">
+        <li class="chapter " data-level="12.1" data-path="../practice/">
             
-                <a href="../action/bookinfo-sample.html">
+                <a href="../practice/">
             
                     
-                        <b>9.1.</b>
+                        <b>12.1.</b>
                     
-                    Bookinfo 示例
+                    实际案例概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../practice/create-cluster.html">
+            
+                <a href="../practice/create-cluster.html">
+            
+                    
+                        <b>12.2.</b>
+                    
+                    创建集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../practice/online-boutique.html">
+            
+                <a href="../practice/online-boutique.html">
+            
+                    
+                        <b>12.3.</b>
+                    
+                    部署 Online Boutique 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../practice/observability.html">
+            
+                <a href="../practice/observability.html">
+            
+                    
+                        <b>12.4.</b>
+                    
+                    部署可观察性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="../practice/traffic-routing.html">
+            
+                <a href="../practice/traffic-routing.html">
+            
+                    
+                        <b>12.5.</b>
+                    
+                    路由流量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.6" data-path="../practice/fault-injection.html">
+            
+                <a href="../practice/fault-injection.html">
+            
+                    
+                        <b>12.6.</b>
+                    
+                    错误注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.7" data-path="../practice/resiliency.html">
+            
+                <a href="../practice/resiliency.html">
+            
+                    
+                        <b>12.7.</b>
+                    
+                    弹性
             
                 </a>
             
@@ -1089,11 +1577,11 @@
 </ul>
 <p>&#x6BCF;&#x4E2A;&#x90E8;&#x5206;&#x4E2D;&#x90FD;&#x5305;&#x542B;&#x9759;&#x6001;&#x914D;&#x7F6E;&#x4E0E;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#xFF0C;&#x5176;&#x4E2D; bootstrap &#x914D;&#x7F6E;&#x53C8;&#x662F;&#x5728;&#x96C6;&#x7FA4;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x901A;&#x8FC7; sidecar &#x542F;&#x52A8;&#x53C2;&#x6570;&#x6CE8;&#x5165;&#x7684;&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728; <code>/etc/istio/proxy/envoy-rev0.json</code>&#x3002;</p>
 <p>Envoy &#x7684;&#x914D;&#x7F6E; dump &#x51FA;&#x6765;&#x540E;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;</p>
-<figure id="fig3.3.1"><a href="../images/006tNbRwly1fy2x2zk1hhj30ee0h9jtg.jpg" data-lightbox="d22be431-70f2-4529-91df-b9fca033a589" data-title="Envoy &#x914D;&#x7F6E;"><img src="../images/006tNbRwly1fy2x2zk1hhj30ee0h9jtg.jpg" alt="Envoy &#x914D;&#x7F6E;"></a><figcaption>&#x56FE; 3.3.1&#xFF1A;Envoy &#x914D;&#x7F6E;</figcaption></figure>
+<figure id="fig3.4.1"><a href="../images/006tNbRwly1fy2x2zk1hhj30ee0h9jtg.jpg" data-lightbox="74e331f2-6857-4a36-8ac5-7788da598fa4" data-title="Envoy &#x914D;&#x7F6E;"><img src="../images/006tNbRwly1fy2x2zk1hhj30ee0h9jtg.jpg" alt="Envoy &#x914D;&#x7F6E;"></a><figcaption>&#x56FE; 3.4.1&#xFF1A;Envoy &#x914D;&#x7F6E;</figcaption></figure>
 <p>&#x7531;&#x4E8E; bootstrap &#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x662F;&#x6765;&#x81EA; Envoy &#x542F;&#x52A8;&#x65F6;&#x52A0;&#x8F7D;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6;&#xFF0C;&#x4E3B;&#x8981;&#x914D;&#x7F6E;&#x4E86;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x3001;tracing&#x3001;admin &#x548C;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x6536;&#x96C6;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x672C;&#x6587;&#x7684;&#x91CD;&#x70B9;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x7814;&#x7A76;&#x3002;</p>
-<figure id="fig3.3.2"><a href="../images/006tNbRwly1fy2xid761zj30c70ai0tj.jpg" data-lightbox="fdeb67cc-8c44-443f-86b3-d973867faee2" data-title="bootstrap &#x914D;&#x7F6E;"><img src="../images/006tNbRwly1fy2xid761zj30c70ai0tj.jpg" alt="bootstrap &#x914D;&#x7F6E;"></a><figcaption>&#x56FE; 3.3.2&#xFF1A;bootstrap &#x914D;&#x7F6E;</figcaption></figure>
+<figure id="fig3.4.2"><a href="../images/006tNbRwly1fy2xid761zj30c70ai0tj.jpg" data-lightbox="80e2867f-788e-493e-9bad-41bc4a35cf05" data-title="bootstrap &#x914D;&#x7F6E;"><img src="../images/006tNbRwly1fy2xid761zj30c70ai0tj.jpg" alt="bootstrap &#x914D;&#x7F6E;"></a><figcaption>&#x56FE; 3.4.2&#xFF1A;bootstrap &#x914D;&#x7F6E;</figcaption></figure>
 <p>&#x4E0A;&#x56FE;&#x662F; bootstrap &#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
-<p><a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-msg-config-bootstrap-v2-bootstrap" target="_blank">Bootstrap</a> &#x662F; Envoy &#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x6839;&#x672C;&#x6765;&#x6E90;&#xFF0C;<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-msg-config-bootstrap-v2-bootstrap" target="_blank">Bootstrap</a> &#x6D88;&#x606F;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5C31;&#x662F;&#x9759;&#x6001;&#x548C;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#x3002;&#x4F8B;&#x5982; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/lds.proto.html#envoy-api-msg-listener" target="_blank">Listener</a> &#x6216; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cds.proto.html#envoy-api-msg-cluster" target="_blank">Cluster</a> &#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x65E2;&#x53EF;&#x4EE5;&#x4ECE; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-field-config-bootstrap-v2-bootstrap-static-resources" target="_blank">static_resources</a> &#x9759;&#x6001;&#x7684;&#x83B7;&#x5F97;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-field-config-bootstrap-v2-bootstrap-dynamic-resources" target="_blank">dynamic_resources</a> &#x4E2D;&#x914D;&#x7F6E;&#x7684; <a href="http://www.servicemesher.com/envoy/configuration/listeners/lds.html#config-listeners-lds" target="_blank">LDS</a> &#x6216; <a href="http://www.servicemesher.com/envoy/configuration/cluster_manager/cds.html#config-cluster-manager-cds" target="_blank">CDS</a> &#x4E4B;&#x7C7B;&#x7684; xDS &#x670D;&#x52A1;&#x83B7;&#x53D6;&#x3002;</p>
+<p>Bootstrap &#x662F; Envoy &#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x6839;&#x672C;&#x6765;&#x6E90;&#xFF0C;Bootstrap &#x6D88;&#x606F;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5C31;&#x662F;&#x9759;&#x6001;&#x548C;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#x3002;&#x4F8B;&#x5982; Listener&#x6216; Cluster &#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x65E2;&#x53EF;&#x4EE5;&#x4ECE;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x914D;&#x7F6E;&#x4E2D;&#x83B7;&#x5F97;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#x4E2D;&#x914D;&#x7F6E;&#x7684; LDS &#x6216; CDS &#x4E4B;&#x7C7B;&#x7684; xDS &#x670D;&#x52A1;&#x83B7;&#x53D6;&#x3002;</p>
 <h3 id="listener">Listener</h3>
 <p>Listener &#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x76D1;&#x542C; IP &#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x7B56;&#x7565;&#x8F6C;&#x53D1;&#x3002;</p>
 <p><strong>Listener &#x7684;&#x7279;&#x70B9;</strong></p>
@@ -1136,14 +1624,13 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-<li><p><strong>filter_chains</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;Envoy &#x4E2D;&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x901A;&#x7528;&#x7684; filter&#xFF0C;&#x6BCF;&#x79CD; filter &#x90FD;&#x6709;&#x7279;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;Envoy &#x4F1A;&#x6839;&#x636E;&#x8BE5;&#x914D;&#x7F6E;&#x987A;&#x5E8F;&#x6267;&#x884C; filter&#x3002;Envoy &#x4E2D;&#x5185;&#x7F6E;&#x7684; filter &#x6709;&#xFF1A;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/configuration/network_filters/client_ssl_auth_filter#config-network-filters-client-ssl-auth" target="_blank">envoy.client_ssl_auth</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/configuration/network_filters/echo_filter#config-network-filters-echo" target="_blank">envoy.echo</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/configuration/http_conn_man/http_conn_man#config-http-conn-man" target="_blank">Envoy.http_connection_manager</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/configuration/network_filters/mongo_proxy_filter#config-network-filters-mongo-proxy" target="_blank">envoy.mongo_proxy</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/configuration/network_filters/rate_limit_filter#config-network-filters-rate-limit" target="_blank">envoy.rate_limit</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/configuration/network_filters/redis_proxy_filter#config-network-filters-redis-proxy" target="_blank">Envoy.redis_proxy</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/configuration/network_filters/tcp_proxy_filter#config-network-filters-tcp-proxy" target="_blank">envoy.tcp_proxy</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/intro/arch_overview/http_filters" target="_blank">http_filters</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/v1.8.0/configuration/thrift_filters/thrift_filters" target="_blank">thrift_filters</a>&#x7B49;&#x3002;&#x8FD9;&#x4E9B; filter &#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x4E5F;&#x53EF;&#x4EE5;&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x6269;&#x5C55;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528; Istio &#x4E2D;&#x7684; <a href="https://istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#envoyfilter" target="_blank">EnvoyFilter &#x914D;&#x7F6E;</a>&#x3002;</p>
+<li><p><strong>filter_chains</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;Envoy &#x4E2D;&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x901A;&#x7528;&#x7684; filter&#xFF0C;&#x6BCF;&#x79CD; filter &#x90FD;&#x6709;&#x7279;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;Envoy &#x4F1A;&#x6839;&#x636E;&#x8BE5;&#x914D;&#x7F6E;&#x987A;&#x5E8F;&#x6267;&#x884C; filter&#x3002;</p>
 </li>
-<li><p><strong>use_original_dst</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528; iptables &#x91CD;&#x5B9A;&#x5411;&#x8FDE;&#x63A5;&#xFF0C;&#x5219;&#x4EE3;&#x7406;&#x63A5;&#x6536;&#x7684;&#x7AEF;&#x53E3;&#x53EF;&#x80FD;&#x4E0E;<a href="http://www.servicemesher.com/envoy/configuration/listener_filters/original_dst_filter.html" target="_blank">&#x539F;&#x59CB;&#x76EE;&#x7684;&#x5730;&#x5740;</a>&#x7684;&#x7AEF;&#x53E3;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x5F53;&#x6B64;&#x6807;&#x5FD7;&#x8BBE;&#x7F6E;&#x4E3A; true &#x65F6;&#xFF0C;Listener &#x5C06;&#x91CD;&#x5B9A;&#x5411;&#x7684;&#x8FDE;&#x63A5;&#x5207;&#x6362;&#x5230;&#x4E0E;&#x539F;&#x59CB;&#x76EE;&#x7684;&#x5730;&#x5740;&#x5173;&#x8054;&#x7684; Listener&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E0E;&#x539F;&#x59CB;&#x76EE;&#x7684;&#x5730;&#x5740;&#x5173;&#x8054;&#x7684; Listener&#xFF0C;&#x5219;&#x8FDE;&#x63A5;&#x7531;&#x63A5;&#x6536;&#x5B83;&#x7684; Listener &#x5904;&#x7406;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; false&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x5C06;&#x88AB;&#x5E9F;&#x5F03;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<a href="http://www.servicemesher.com/envoy/configuration/listener_filters/original_dst_filter.html" target="_blank">&#x539F;&#x59CB;&#x76EE;&#x7684;&#x5730;&#x5740;</a>&#x7684; Listener filter &#x66FF;&#x4EE3;&#x3002;&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x7528;&#x9014;&#x662F;&#xFF0C;Envoy &#x901A;&#x8FC7;&#x76D1;&#x542C; 15001 &#x7AEF;&#x53E3;&#x5C06;&#x5E94;&#x7528;&#x7684;&#x6D41;&#x91CF;&#x622A;&#x53D6;&#x540E;&#x518D;&#x7531;&#x5176;&#x4ED6; Listener &#x5904;&#x7406;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x8F6C;&#x53D1;&#x51FA;&#x53BB;&#xFF0C;&#x8BE6;&#x60C5;&#x89C1; <a href="https://zhaohuabing.com/post/2018-09-25-istio-traffic-management-impl-intro/#virtual-listener" target="_blank">Virtual Listener</a>&#x3002;</p>
+<li><p><strong>use_original_dst</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528; iptables &#x91CD;&#x5B9A;&#x5411;&#x8FDE;&#x63A5;&#xFF0C;&#x5219;&#x4EE3;&#x7406;&#x63A5;&#x6536;&#x7684;&#x7AEF;&#x53E3;&#x53EF;&#x80FD;&#x4E0E;&#x539F;&#x59CB;&#x76EE;&#x7684;&#x5730;&#x5740;&#x7684;&#x7AEF;&#x53E3;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x5F53;&#x6B64;&#x6807;&#x5FD7;&#x8BBE;&#x7F6E;&#x4E3A; true &#x65F6;&#xFF0C;Listener &#x5C06;&#x91CD;&#x5B9A;&#x5411;&#x7684;&#x8FDE;&#x63A5;&#x5207;&#x6362;&#x5230;&#x4E0E;&#x539F;&#x59CB;&#x76EE;&#x7684;&#x5730;&#x5740;&#x5173;&#x8054;&#x7684; Listener&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E0E;&#x539F;&#x59CB;&#x76EE;&#x7684;&#x5730;&#x5740;&#x5173;&#x8054;&#x7684; Listener&#xFF0C;&#x5219;&#x8FDE;&#x63A5;&#x7531;&#x63A5;&#x6536;&#x5B83;&#x7684; Listener &#x5904;&#x7406;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; false&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x8BE5;&#x53C2;&#x6570;&#x5C06;&#x88AB;&#x5E9F;&#x5F03;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x76EE;&#x7684;&#x5730;&#x5740;&#x7684; Listener filter &#x66FF;&#x4EE3;&#x3002;&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x7528;&#x9014;&#x662F;&#xFF0C;Envoy &#x901A;&#x8FC7;&#x76D1;&#x542C; 15001 &#x7AEF;&#x53E3;&#x5C06;&#x5E94;&#x7528;&#x7684;&#x6D41;&#x91CF;&#x622A;&#x53D6;&#x540E;&#x518D;&#x7531;&#x5176;&#x4ED6; Listener &#x5904;&#x7406;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x8F6C;&#x53D1;&#x51FA;&#x53BB;&#xFF0C;&#x8BE6;&#x60C5;&#x89C1; <a href="https://zhaohuabing.com/post/2018-09-25-istio-traffic-management-impl-intro/#virtual-listener" target="_blank">Virtual Listener</a>&#x3002;</p>
 </li>
 </ul>
-<p>&#x5173;&#x4E8E; Listener &#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8BF7;&#x53C2;&#x8003; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/lds.proto#envoy-api-msg-listener" target="_blank">Envoy v2 API reference - listener</a>&#x3002;</p>
 <h3 id="cluster">Cluster</h3>
-<p>Cluster &#x662F;&#x6307; Envoy &#x8FDE;&#x63A5;&#x7684;&#x4E00;&#x7EC4;&#x903B;&#x8F91;&#x76F8;&#x540C;&#x7684;&#x4E0A;&#x6E38;&#x4E3B;&#x673A;&#x3002;Envoy &#x901A;&#x8FC7;<a href="http://www.servicemesher.com/envoy/intro/arch_overview/service_discovery.html" target="_blank">&#x670D;&#x52A1;&#x53D1;&#x73B0;</a>&#x6765;&#x53D1;&#x73B0; cluster &#x7684;&#x6210;&#x5458;&#x3002;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x901A;&#x8FC7;<a href="http://www.servicemesher.com/envoy/intro/arch_overview/health_checking.html#arch-overview-health-checking" target="_blank">&#x4E3B;&#x52A8;&#x5065;&#x5EB7;&#x68C0;&#x67E5;</a>&#x6765;&#x786E;&#x5B9A;&#x96C6;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x5065;&#x5EB7;&#x72B6;&#x6001;&#x3002;Envoy &#x901A;&#x8FC7;<a href="http://www.servicemesher.com/envoy/intro/arch_overview/load_balancing.html#arch-overview-load-balancing" target="_blank">&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B56;&#x7565;</a>&#x51B3;&#x5B9A;&#x5C06;&#x8BF7;&#x6C42;&#x8DEF;&#x7531;&#x5230; cluster &#x7684;&#x54EA;&#x4E2A;&#x6210;&#x5458;&#x3002;</p>
+<p>Cluster &#x662F;&#x6307; Envoy &#x8FDE;&#x63A5;&#x7684;&#x4E00;&#x7EC4;&#x903B;&#x8F91;&#x76F8;&#x540C;&#x7684;&#x4E0A;&#x6E38;&#x4E3B;&#x673A;&#x3002;Envoy &#x901A;&#x8FC7;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x6765;&#x53D1;&#x73B0; cluster &#x7684;&#x6210;&#x5458;&#x3002;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x901A;&#x8FC7;&#x4E3B;&#x52A8;&#x5065;&#x5EB7;&#x68C0;&#x67E5;&#x6765;&#x786E;&#x5B9A;&#x96C6;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x5065;&#x5EB7;&#x72B6;&#x6001;&#x3002;Envoy &#x901A;&#x8FC7;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B56;&#x7565;&#x51B3;&#x5B9A;&#x5C06;&#x8BF7;&#x6C42;&#x8DEF;&#x7531;&#x5230; cluster &#x7684;&#x54EA;&#x4E2A;&#x6210;&#x5458;&#x3002;</p>
 <p><strong>Cluster &#x7684;&#x7279;&#x70B9;</strong></p>
 <ul>
 <li>&#x4E00;&#x7EC4;&#x903B;&#x8F91;&#x4E0A;&#x76F8;&#x540C;&#x7684;&#x4E3B;&#x673A;&#x6784;&#x6210;&#x4E00;&#x4E2A; cluster&#x3002;</li>
@@ -1197,14 +1684,13 @@
 <li><strong>hosts</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x914D;&#x7F6E;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684; IP &#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#xFF0C;&#x53EA;&#x6709;&#x4F7F;&#x7528;&#x4E86;  <code>STATIC</code>&#x3001;<code>STRICT_DNS</code>&#x3001;<code>LOGICAL_DNS</code> &#x670D;&#x52A1;&#x53D1;&#x73B0;&#x7C7B;&#x578B;&#x65F6;&#x624D;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x3002;</li>
 <li><strong>eds_cluster_config</strong>&#xFF1A;&#x5982;&#x679C;&#x4F7F;&#x7528; <code>EDS</code> &#x505A;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x8BE5;&#x9879;&#x76EE;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x7684;&#x914D;&#x7F6E;&#x6709; <code>service_name</code> &#x548C; <code>ads</code>&#x3002;</li>
 </ul>
-<p>&#x5173;&#x4E8E; Cluster &#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8BF7;&#x53C2;&#x8003; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cds.proto#cluster" target="_blank">Envoy v2 API reference - cluster</a>&#x3002;</p>
 <h3 id="route">Route</h3>
-<p>&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x6240;&#x8BF4;&#x7684;&#x8DEF;&#x7531;&#x6307;&#x7684;&#x662F; <a href="http://www.servicemesher.com/envoy/intro/arch_overview/http_routing.html" target="_blank">HTTP &#x8DEF;&#x7531;</a>&#xFF0C;&#x8FD9;&#x4E5F;&#x4F7F;&#x5F97; Envoy &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5904;&#x7406;&#x7F51;&#x683C;&#x8FB9;&#x7F18;&#x7684;&#x6D41;&#x91CF;&#x3002;HTTP &#x8DEF;&#x7531;&#x8F6C;&#x53D1;&#x662F;&#x901A;&#x8FC7;&#x8DEF;&#x7531;&#x8FC7;&#x6EE4;&#x5668;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x8BE5;&#x8FC7;&#x6EE4;&#x5668;&#x7684;&#x4E3B;&#x8981;&#x804C;&#x80FD;&#x5C31;&#x662F;&#x6267;&#x884C;<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v1/route_config/route_config#config-http-conn-man-route-table" target="_blank">&#x8DEF;&#x7531;&#x8868;</a>&#x4E2D;&#x7684;&#x6307;&#x4EE4;&#x3002;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x505A;&#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#xFF0C;&#x8DEF;&#x7531;&#x8FC7;&#x6EE4;&#x5668;&#x8FD8;&#x9700;&#x8981;&#x5904;&#x7406;&#x91CD;&#x8BD5;&#x3001;&#x7EDF;&#x8BA1;&#x4E4B;&#x7C7B;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x6240;&#x8BF4;&#x7684;&#x8DEF;&#x7531;&#x6307;&#x7684;&#x662F; HTTP &#x8DEF;&#x7531;&#xFF0C;&#x8FD9;&#x4E5F;&#x4F7F;&#x5F97; Envoy &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5904;&#x7406;&#x7F51;&#x683C;&#x8FB9;&#x7F18;&#x7684;&#x6D41;&#x91CF;&#x3002;HTTP &#x8DEF;&#x7531;&#x8F6C;&#x53D1;&#x662F;&#x901A;&#x8FC7;&#x8DEF;&#x7531;&#x8FC7;&#x6EE4;&#x5668;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x8BE5;&#x8FC7;&#x6EE4;&#x5668;&#x7684;&#x4E3B;&#x8981;&#x804C;&#x80FD;&#x5C31;&#x662F;&#x6267;&#x884C;<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v1/route_config/route_config#config-http-conn-man-route-table" target="_blank">&#x8DEF;&#x7531;&#x8868;</a>&#x4E2D;&#x7684;&#x6307;&#x4EE4;&#x3002;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x505A;&#x91CD;&#x5B9A;&#x5411;&#x548C;&#x8F6C;&#x53D1;&#xFF0C;&#x8DEF;&#x7531;&#x8FC7;&#x6EE4;&#x5668;&#x8FD8;&#x9700;&#x8981;&#x5904;&#x7406;&#x91CD;&#x8BD5;&#x3001;&#x7EDF;&#x8BA1;&#x4E4B;&#x7C7B;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
 <p><strong>HTTP &#x8DEF;&#x7531;&#x7684;&#x7279;&#x70B9;</strong></p>
 <ul>
 <li>&#x524D;&#x7F00;&#x548C;&#x7CBE;&#x786E;&#x8DEF;&#x5F84;&#x5339;&#x914D;&#x89C4;&#x5219;&#x3002;</li>
 <li>&#x53EF;&#x8DE8;&#x8D8A;&#x591A;&#x4E2A;&#x4E0A;&#x6E38;&#x96C6;&#x7FA4;&#x8FDB;&#x884C;&#x57FA;&#x4E8E;<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v1/route_config/route#config-http-conn-man-route-table-route-weighted-clusters" target="_blank">&#x6743;&#x91CD;/&#x767E;&#x5206;&#x6BD4;&#x7684;&#x8DEF;&#x7531;</a>&#x3002;</li>
-<li>&#x57FA;&#x4E8E;<a href="http://www.servicemesher.com/envoy/intro/arch_overview/http_routing.html#arch-overview-http-routing-priority" target="_blank">&#x4F18;&#x5148;&#x7EA7;</a>&#x7684;&#x8DEF;&#x7531;&#x3002;</li>
+<li>&#x57FA;&#x4E8E;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x8DEF;&#x7531;&#x3002;</li>
 <li>&#x57FA;&#x4E8E;<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v1/route_config/route#config-http-conn-man-route-table-hash-policy" target="_blank">&#x54C8;&#x5E0C;</a>&#x7B56;&#x7565;&#x7684;&#x8DEF;&#x7531;&#x3002;</li>
 </ul>
 <p><strong>Route &#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</strong></p>
@@ -1225,7 +1711,6 @@
 <li><strong>virtual_hosts</strong>&#xFF1A;&#x56E0;&#x4E3A; <strong>VirtualHosts</strong> &#x662F; Envoy &#x4E2D;&#x5F15;&#x5165;&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E0B;&#x6587;&#x5C06;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E; <code>virtual_hosts</code> &#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</li>
 <li><strong>validate_clusters</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x5F00;&#x542F;&#x4F7F;&#x7528; cluster manager &#x6765;&#x68C0;&#x6D4B;&#x8DEF;&#x7531;&#x8868;&#x5F15;&#x7528;&#x7684; cluster &#x662F;&#x5426;&#x6709;&#x6548;&#x3002;&#x5982;&#x679C;&#x662F;&#x8DEF;&#x7531;&#x8868;&#x662F;&#x901A;&#x8FC7; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/filter/network/http_connection_manager/v2/http_connection_manager.proto#envoy-api-field-config-filter-network-http-connection-manager-v2-httpconnectionmanager-route-config" target="_blank">route_config</a> &#x9759;&#x6001;&#x914D;&#x7F6E;&#x7684;&#x5219;&#x8BE5;&#x503C;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x4E3A; true&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4F7F;&#x7528; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/filter/network/http_connection_manager/v2/http_connection_manager.proto#envoy-api-field-config-filter-network-http-connection-manager-v2-httpconnectionmanager-rds" target="_blank">rds</a> &#x52A8;&#x6001;&#x914D;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x8BE5;&#x503C;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x4E3A; false&#x3002;</li>
 </ul>
-<p>&#x5173;&#x4E8E; Route &#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8BF7;&#x53C2;&#x8003; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/rds.proto" target="_blank">Envoy v2 API reference - HTTP route configuration</a>&#x3002;</p>
 <h4 id="routevirtualhost">route.VirtualHost</h4>
 <p>VirtualHost &#x5373;&#x4E0A;&#x6587;&#x4E2D; Route &#x914D;&#x7F6E;&#x4E2D;&#x7684; <code>virtual_hosts</code>&#xFF0C;VirtualHost &#x662F;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x4E2D;&#x7684;&#x9876;&#x7EA7;&#x5143;&#x7D20;&#x3002;&#x6BCF;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x4E00;&#x7EC4;&#x6839;&#x636E;&#x4F20;&#x5165;&#x8BF7;&#x6C42;&#x7684; host header &#x8DEF;&#x7531;&#x5230;&#x5B83;&#x7684;&#x57DF;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x5355;&#x4E2A; Listener &#x4E3A;&#x591A;&#x4E2A;&#x9876;&#x7EA7;&#x57DF;&#x8DEF;&#x5F84;&#x6811;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002;&#x57FA;&#x4E8E;&#x57DF;&#x9009;&#x62E9;&#x4E86;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x540E; Envoy  &#x5C31;&#x4F1A;&#x5904;&#x7406;&#x8DEF;&#x7531;&#x4EE5;&#x67E5;&#x770B;&#x8981;&#x8DEF;&#x7531;&#x5230;&#x54EA;&#x4E2A;&#x4E0A;&#x6E38;&#x96C6;&#x7FA4;&#x6216;&#x662F;&#x5426;&#x6267;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#x3002;</p>
 <p><strong>VirtualHost &#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</strong></p>
@@ -1252,7 +1737,7 @@
 <li><strong>domains</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E2A;&#x7528;&#x6765;&#x5339;&#x914D; VirtualHost &#x7684;&#x57DF;&#x540D;&#xFF08;host/authority header&#xFF09;&#x5217;&#x8868;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x901A;&#x914D;&#x7B26;&#xFF0C;&#x4F46;&#x662F;&#x901A;&#x914D;&#x7B26;&#x4E0D;&#x80FD;&#x5339;&#x914D;&#x7A7A;&#x5B57;&#x7B26;&#xFF0C;&#x9664;&#x4E86;&#x4EC5;&#x4F7F;&#x7528; <code>*</code> &#x4F5C;&#x4E3A; domains&#xFF0C;&#x6CE8;&#x610F;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x548C;&#x5B58;&#x5728;&#x4EA4;&#x96C6;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x6761; domain &#x88AB;&#x5339;&#x914D;&#x4E0A;&#x4E86;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x8DEF;&#x7531;&#x3002;Istio &#x4F1A;&#x4E3A;&#x8BE5;&#x503C;&#x914D;&#x7F6E;&#x6240;&#x6709;&#x5730;&#x5740;&#x89E3;&#x6790;&#x5F62;&#x5F0F;&#xFF0C;&#x5305;&#x62EC; IP &#x5730;&#x5740;&#x3001;FQDN &#x548C;&#x77ED;&#x57DF;&#x540D;&#x7B49;&#x3002;</li>
 <li><strong>routes</strong>&#xFF1A;&#x9488;&#x5BF9;&#x5165;&#x53E3;&#x6D41;&#x91CF;&#x7684;&#x6709;&#x5E8F;&#x8DEF;&#x7531;&#x5217;&#x8868;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x4E0A;&#x7684;&#x8DEF;&#x7531;&#x5C06;&#x88AB;&#x6267;&#x884C;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x4E0B;&#x6587;&#x5C06;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E; route &#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</li>
 </ul>
-<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x7684; VirtualHost &#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x8BE5;&#x914D;&#x7F6E;&#x6765;&#x81EA; <a href="https://istio.io/zh/docs/examples/bookinfo/" target="_blank">Bookinfo &#x5E94;&#x7528;</a>&#x7684; details &#x5E94;&#x7528;&#x7684; Sidecar &#x670D;&#x52A1;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x7684; VirtualHost &#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x8BE5;&#x914D;&#x7F6E;&#x6765;&#x81EA; Bookinfo &#x5E94;&#x7528;&#x7684; details &#x5E94;&#x7528;&#x7684; Sidecar &#x670D;&#x52A1;&#x3002;</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
             <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;details.default.svc.cluster.local:9080&quot;</span><span class="token punctuation">,</span>
             <span class="token property">&quot;domains&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -1329,7 +1814,6 @@
             <span class="token punctuation">]</span>
         <span class="token punctuation">}</span>
 </code></pre>
-<p>&#x5173;&#x4E8E; route.VirtualHost &#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8BF7;&#x53C2;&#x8003; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-msg-route-virtualhost" target="_blank">Envoy v2 API reference - route.VirtualHost</a>&#x3002;</p>
 <h4 id="routeroute">route.Route</h4>
 <p>&#x8DEF;&#x7531;&#x65E2;&#x662F;&#x5982;&#x4F55;&#x5339;&#x914D;&#x8BF7;&#x6C42;&#x7684;&#x89C4;&#x8303;&#xFF0C;&#x4E5F;&#x662F;&#x5BF9;&#x4E0B;&#x4E00;&#x6B65;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#x6307;&#x793A;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;redirect&#x3001;forward&#x3001;rewrite&#x7B49;&#xFF09;&#x3002;</p>
 <p><strong>route.Route &#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</strong></p>
@@ -1351,20 +1835,16 @@
 <p>&#x4E0B;&#x9762;&#x662F;&#x5173;&#x4E8E;&#x4E0A;&#x8FF0;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x89E3;&#x6790;&#x3002;</p>
 <ul>
 <li><strong>match</strong>&#xFF1A;&#x8DEF;&#x7531;&#x5339;&#x914D;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982; URL prefix&#xFF08;&#x524D;&#x7F00;&#xFF09;&#x3001;path&#xFF08;URL &#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF09;&#x3001;regex&#xFF08;&#x89C4;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF09;&#x7B49;&#x3002;</li>
-<li><strong>route</strong>&#xFF1A;&#x8FD9;&#x91CC;&#x9762;&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x53EF;&#x4EE5;&#x662F; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-route" target="_blank">route</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-redirect" target="_blank">redirect</a> &#x548C; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-direct-response" target="_blank">direct_response</a>&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x91CC;&#x9762;&#x6CA1;&#x6709;&#x4E13;&#x95E8;&#x7684;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x9879;&#x7528;&#x6765;&#x914D;&#x7F6E;&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x884C;&#x4E3A;&#xFF0C;&#x800C;&#x662F;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x586B;&#x5145;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x6765;&#x786E;&#x5B9A;&#x7684;&#x3002;&#x4F8B;&#x5982;&#x5728;&#x6B64;&#x5904;&#x6DFB;&#x52A0; <code>cluster</code> &#x914D;&#x7F6E;&#x5219;&#x6697;&#x793A;&#x8DEF;&#x7531;&#x52A8;&#x4F5C;&#x4E3A;&#x201D;route&#x201C;&#xFF0C;&#x8868;&#x793A;&#x5C06;&#x6D41;&#x91CF;&#x8DEF;&#x7531;&#x5230;&#x8BE5; cluster&#x3002;&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x8003; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#route-routeaction" target="_blank">route.RouteAction</a>&#x3002;</li>
+<li><strong>route</strong>&#xFF1A;&#x8FD9;&#x91CC;&#x9762;&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x53EF;&#x4EE5;&#x662F; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-route" target="_blank">route</a>&#x3001;<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-redirect" target="_blank">redirect</a> &#x548C; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-direct-response" target="_blank">direct_response</a>&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x91CC;&#x9762;&#x6CA1;&#x6709;&#x4E13;&#x95E8;&#x7684;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x9879;&#x7528;&#x6765;&#x914D;&#x7F6E;&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x884C;&#x4E3A;&#xFF0C;&#x800C;&#x662F;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x586B;&#x5145;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x6765;&#x786E;&#x5B9A;&#x7684;&#x3002;&#x4F8B;&#x5982;&#x5728;&#x6B64;&#x5904;&#x6DFB;&#x52A0; <code>cluster</code> &#x914D;&#x7F6E;&#x5219;&#x6697;&#x793A;&#x8DEF;&#x7531;&#x52A8;&#x4F5C;&#x4E3A;&#x201D;route&#x201C;&#xFF0C;&#x8868;&#x793A;&#x5C06;&#x6D41;&#x91CF;&#x8DEF;&#x7531;&#x5230;&#x8BE5; cluster&#x3002;</li>
 <li><strong>decorator</strong>&#xFF1A;&#x88AB;&#x5339;&#x914D;&#x7684;&#x8DEF;&#x7531;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x8868;&#x793A;&#x88AB;&#x5339;&#x914D;&#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x548C; URL&#x3002;&#x8BE5;&#x914D;&#x7F6E;&#x91CC;&#x6709;&#x4E14;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5FC5;&#x987B;&#x914D;&#x7F6E;&#x7684;&#x9879; <code>operation</code>&#xFF0C;&#x4F8B;&#x5982; <code>details.default.svc.cluster.local:9080/*</code>&#x3002;</li>
-<li><strong>per_filter_config</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A; map &#x7C7B;&#x578B;&#xFF0C;<code>per_filter_config</code> &#x5B57;&#x6BB5;&#x53EF;&#x7528;&#x4E8E;&#x4E3A; filter &#x63D0;&#x4F9B;&#x7279;&#x5B9A;&#x8DEF;&#x7531;&#x7684;&#x914D;&#x7F6E;&#x3002;Map &#x7684; key &#x5E94;&#x4E0E; filleter &#x540D;&#x79F0;&#x5339;&#x914D;&#xFF0C;&#x4F8B;&#x5982;&#x7528;&#x4E8E; HTTP buffer filter &#x7684; <code>envoy.buffer</code>&#x3002;&#x8BE5;&#x5B57;&#x6BB5;&#x662F;&#x7279;&#x5B9A;&#x4E8E; filter &#x7684;&#xFF0C;&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x8003; <a href="https://www.envoyproxy.io/docs/envoy/latest/configuration/http_filters/http_filters#config-http-filters" target="_blank">HTTP filter</a>&#x3002;</li>
+<li><strong>per_filter_config</strong>&#xFF1A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A; map &#x7C7B;&#x578B;&#xFF0C;<code>per_filter_config</code> &#x5B57;&#x6BB5;&#x53EF;&#x7528;&#x4E8E;&#x4E3A; filter &#x63D0;&#x4F9B;&#x7279;&#x5B9A;&#x8DEF;&#x7531;&#x7684;&#x914D;&#x7F6E;&#x3002;Map &#x7684; key &#x5E94;&#x4E0E; filleter &#x540D;&#x79F0;&#x5339;&#x914D;&#xFF0C;&#x4F8B;&#x5982;&#x7528;&#x4E8E; HTTP buffer filter &#x7684; <code>envoy.buffer</code>&#x3002;</li>
 </ul>
-<p>&#x5173;&#x4E8E; route.Route &#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8BF7;&#x53C2;&#x8003; <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-msg-route-route" target="_blank">Envoy v2 API reference - route.Route</a>&#x3002;</p>
 <h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
 <ul>
-<li><a href="http://www.servicemesher.com/envoy/configuration/overview/v2_overview.html" target="_blank">Envoy v2 API &#x6982;&#x89C8; - servicemesher.com</a></li>
-<li><a href="http://www.servicemesher.com/envoy/configuration/listeners/lds.html" target="_blank">&#x76D1;&#x542C;&#x5668;&#x53D1;&#x73B0;&#x670D;&#x52A1;&#xFF08;LDS&#xFF09;- servicemesher.com</a></li>
-<li><a href="http://www.servicemesher.com/envoy/configuration/http_conn_man/rds.html" target="_blank">&#x8DEF;&#x7531;&#x53D1;&#x73B0;&#x670D;&#x52A1;&#xFF08;RDS&#xFF09;- servicemesher.com</a></li>
-<li><a href="http://www.servicemesher.com/envoy/configuration/cluster_manager/cds.html" target="_blank">&#x96C6;&#x7FA4;&#x53D1;&#x73B0;&#x670D;&#x52A1;&#xFF08;CDS&#xFF09;- servicemesher.com</a></li>
+<li><a href="https://cloudnative.to/envoy/" target="_blank">Envoy &#x4E2D;&#x6587;&#x6587;&#x6863; - cloudnative.to</a></li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2017-2022 | Distributed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY 4.0</a> | <a href="https://jimmysong.io" target="_blank">jimmysong.io</a> all right reserved.</span><span class="footer-modification"> Updated at 
-2022-02-23 08:26:15
+2022-03-09 03:27:40
 </span></footer>
                                 
                                 </section>
@@ -1408,7 +1888,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Envoy proxy 配置详解","level":"3.3","depth":1,"next":{"title":"Envoy API","level":"3.4","depth":1,"path":"data-plane/envoy-api.md","ref":"data-plane/envoy-api.md","articles":[]},"previous":{"title":"Istio sidecar proxy 配置","level":"3.2","depth":1,"path":"data-plane/istio-sidecar-proxy-config.md","ref":"data-plane/istio-sidecar-proxy-config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","lightbox","ga","hide-element","expandable-chapters-small","insert-logo","adsense"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2017-2022 | Distributed under <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY 4.0</a> | <a href=https://jimmysong.io>jimmysong.io</a>","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/rootsongjc/istio-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/rootsongjc/istio-handbook/blob/master/"},"splitter":{},"adsense":{"client":"ca-pub-4029167986768912","slot":"2445941692","format":"auto","element":".page-inner section","position":"bottom"},"codesnippet":{},"sitemap-general":{"prefix":"https://jimmysong.io/istio-handbook/"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"rootsongjc/istio-handbook","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"11f7d254cfa4e0ca44b175c66d379ecc"},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-93485976-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 30px","url":"https://jimmysong.io/images/logo-black-text.png"},"search-plus":{},"image-captions":{"caption":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Jimmy Song（宋净超）","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"concepts/what-is-service-mesh.html#fig2.1.1","level":"2.1","list_caption":"Figure: Service Mesh 架构图","alt":"Service Mesh 架构图","nro":1,"url":"../images/00704eQkly1fswh7dbs1pj30id0bpmxl.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Service Mesh 架构图","attributes":{},"skip":false,"key":"2.1.1"},{"backlink":"concepts/the-application-networking-in-post-kubernetes-era.html#fig2.2.1","level":"2.2","list_caption":"Figure: kubernetes vs service mesh","alt":"kubernetes vs service mesh","nro":2,"url":"../images/k8s-vs-service-mesh.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"kubernetes vs service mesh","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"concepts/the-application-networking-in-post-kubernetes-era.html#fig2.2.2","level":"2.2","list_caption":"Figure: 服务发现","alt":"服务发现","nro":3,"url":"../images/service-discovery.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"服务发现","attributes":{},"skip":false,"key":"2.2.2"},{"backlink":"concepts/the-application-networking-in-post-kubernetes-era.html#fig2.2.3","level":"2.2","list_caption":"Figure: Envoy proxy 架构图","alt":"Envoy proxy 架构图","nro":4,"url":"../images/envoy-arch.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy proxy 架构图","attributes":{},"skip":false,"key":"2.2.3"},{"backlink":"concepts/the-application-networking-in-post-kubernetes-era.html#fig2.2.4","level":"2.2","list_caption":"Figure: Istio","alt":"Istio","nro":5,"url":"../images/istio-arch.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio","attributes":{},"skip":false,"key":"2.2.4"},{"backlink":"concepts/service-mesh-architectures.html#fig2.3.1","level":"2.3","list_caption":"Figure: 服务网格的部署模式","alt":"服务网格的部署模式","nro":6,"url":"../images/service-mesh-deployment-models.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"服务网格的部署模式","attributes":{},"skip":false,"key":"2.3.1"},{"backlink":"concepts/service-mesh-patterns.html#fig2.3.1.1","level":"2.3.1","list_caption":"Figure: 服务网格 架构示意图","alt":"服务网格 架构示意图","nro":7,"url":"../images/006tNbRwly1fubs6ts3sgj30vo0osdnj.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"服务网格 架构示意图","attributes":{},"skip":false,"key":"2.3.1.1"},{"backlink":"concepts/service-mesh-patterns.html#fig2.3.1.2","level":"2.3.1","list_caption":"Figure: Ingress 或边缘代理架构示意图","alt":"Ingress 或边缘代理架构示意图","nro":8,"url":"../images/006tNbRwly1fubsk4v16hj30vo0bq75z.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Ingress 或边缘代理架构示意图","attributes":{},"skip":false,"key":"2.3.1.2"},{"backlink":"concepts/service-mesh-patterns.html#fig2.3.1.3","level":"2.3.1","list_caption":"Figure: 路由器网格架构示意图","alt":"路由器网格架构示意图","nro":9,"url":"../images/006tNbRwly1fubsxrph3dj30vq0duq53.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"路由器网格架构示意图","attributes":{},"skip":false,"key":"2.3.1.3"},{"backlink":"concepts/service-mesh-patterns.html#fig2.3.1.4","level":"2.3.1","list_caption":"Figure: Proxy per node 架构示意图","alt":"Proxy per node 架构示意图","nro":10,"url":"../images/006tNbRwly1fubt5a97h7j30vq0bcq5p.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Proxy per node 架构示意图","attributes":{},"skip":false,"key":"2.3.1.4"},{"backlink":"concepts/service-mesh-patterns.html#fig2.3.1.5","level":"2.3.1","list_caption":"Figure: Sidecar代理/Fabric模型示意图","alt":"Sidecar代理/Fabric模型示意图","nro":11,"url":"../images/006tNbRwly1fubvi0dnhlj30vo0ekwhx.jpg","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar代理/Fabric模型示意图","attributes":{},"skip":false,"key":"2.3.1.5"},{"backlink":"concepts/service-mesh-patterns.html#fig2.3.1.6","level":"2.3.1","list_caption":"Figure: Sidecar 代理/控制平面架构示意图","alt":"Sidecar 代理/控制平面架构示意图","nro":12,"url":"../images/006tNbRwly1fubvr83wvgj30vq0mmdip.jpg","index":6,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar 代理/控制平面架构示意图","attributes":{},"skip":false,"key":"2.3.1.6"},{"backlink":"concepts/istio-architecture.html#fig2.3.2.1","level":"2.3.2","list_caption":"Figure: Istio 的部署架构","alt":"Istio 的部署架构","nro":13,"url":"../images/istio-models.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 的部署架构","attributes":{},"skip":false,"key":"2.3.2.1"},{"backlink":"concepts/istio-architecture.html#fig2.3.2.2","level":"2.3.2","list_caption":"Figure: Sidecar 模式","alt":"Sidecar 模式","nro":14,"url":"../images/sidecar-mode.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar 模式","attributes":{},"skip":false,"key":"2.3.2.2"},{"backlink":"concepts/istio-architecture.html#fig2.3.2.3","level":"2.3.2","list_caption":"Figure: Proxyless 模式","alt":"Proxyless 模式","nro":15,"url":"../images/proxyless-mode.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Proxyless 模式","attributes":{},"skip":false,"key":"2.3.2.3"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.4.1.1","level":"2.4.1","list_caption":"Figure: iptables 调用链","alt":"iptables 调用链","nro":16,"url":"../images/0069RVTdly1fv5hukl647j30k6145gnt.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"iptables 调用链","attributes":{},"skip":false,"key":"2.4.1.1"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.4.1.2","level":"2.4.1","list_caption":"Figure: iptables 调用链","alt":"iptables 调用链","nro":17,"url":"../images/0069RVTdgy1fv5dq2bptdj31110begnl.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"iptables 调用链","attributes":{},"skip":false,"key":"2.4.1.2"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.4.1.3","level":"2.4.1","list_caption":"Figure: iptables结构图","alt":"iptables结构图","nro":18,"url":"../images/0069RVTdgy1fv5dm4a9ygj30w50czdi3.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"iptables结构图","attributes":{},"skip":false,"key":"2.4.1.3"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.4.1.4","level":"2.4.1","list_caption":"Figure: Envoy sidecar 流量劫持流程示意图","alt":"Envoy sidecar 流量劫持流程示意图","nro":19,"url":"../images/envoy-sidecar-traffic-interception-zh-20210818.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy sidecar 流量劫持流程示意图","attributes":{},"skip":false,"key":"2.4.1.4"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.4.1.5","level":"2.4.1","list_caption":"Figure: istio sidecar iptables 注入","alt":"istio sidecar iptables 注入","nro":20,"url":"../images/006tNbRwly1fv92uvxu4dj31320giq6u.jpg","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"istio sidecar iptables 注入","attributes":{},"skip":false,"key":"2.4.1.5"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.4.1.6","level":"2.4.1","list_caption":"Figure: Istio bookinfo","alt":"Istio bookinfo","nro":21,"url":"../images/0069RVTdgy1fv5df9lq1aj317o0o6wia.jpg","index":6,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio bookinfo","attributes":{},"skip":false,"key":"2.4.1.6"},{"backlink":"concepts/istio-sidecar-injector.html#fig2.4.2.1","level":"2.4.2","list_caption":"Figure: Sidecar 注入流程图","alt":"Sidecar 注入流程图","nro":22,"url":"../images/006tKfTcly1g0bvoxmfvuj311i0fy0vh.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar 注入流程图","attributes":{},"skip":false,"key":"2.4.2.1"},{"backlink":"concepts/traffic-management-basic.html#fig2.5.1.1","level":"2.5.1","list_caption":"Figure: istio ingress gateway pod","alt":"istio ingress gateway pod","nro":23,"url":"../images/0069RVTdgy1fv7xh71h8fj31fn0dyq9g.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"istio ingress gateway pod","attributes":{},"skip":false,"key":"2.5.1.1"},{"backlink":"concepts/traffic-management-basic.html#fig2.5.1.2","level":"2.5.1","list_caption":"Figure: VirtualSerivce 和 DestimationRule 示意图","alt":"VirtualSerivce 和 DestimationRule 示意图","nro":24,"url":"../images/istio-virtualservice-and-destinationrule-illustration.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"VirtualSerivce 和 DestimationRule 示意图","attributes":{},"skip":false,"key":"2.5.1.2"},{"backlink":"concepts/sidecar-traffic-routing-deep-dive.html#fig2.5.2.1","level":"2.5.2","list_caption":"Figure: Bookinfo 示例","alt":"Bookinfo 示例","nro":25,"url":"../images/006tNbRwgy1fvlwjd3302j31bo0ro0x5.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Bookinfo 示例","attributes":{},"skip":false,"key":"2.5.2.1"},{"backlink":"concepts/sidecar-traffic-routing-deep-dive.html#fig2.5.2.2","level":"2.5.2","list_caption":"Figure: Bookinfo 示例与 Istio 组件连接关系图","alt":"Bookinfo 示例与 Istio 组件连接关系图","nro":26,"url":"../images/006tNbRwly1fyitp0jsghj31o70u0x6p.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Bookinfo 示例与 Istio 组件连接关系图","attributes":{},"skip":false,"key":"2.5.2.2"},{"backlink":"concepts/sidecar-traffic-routing-deep-dive.html#fig2.5.2.3","level":"2.5.2","list_caption":"Figure: Envoy sidecar 流量劫持与路由转发示意图","alt":"Envoy sidecar 流量劫持与路由转发示意图","nro":27,"url":"../images/envoy-sidecar-traffic-interception-20190111.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy sidecar 流量劫持与路由转发示意图","attributes":{},"skip":false,"key":"2.5.2.3"},{"backlink":"data-plane/istio-sidecar-proxy-config.html#fig3.2.1","level":"3.2","list_caption":"Figure: Envoy 配置","alt":"Envoy 配置","nro":28,"url":"../images/006tNbRwly1fyb74brsd5j30xg0lojvt.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy 配置","attributes":{},"skip":false,"key":"3.2.1"},{"backlink":"data-plane/envoy-proxy-config-deep-dive.html#fig3.3.1","level":"3.3","list_caption":"Figure: Envoy 配置","alt":"Envoy 配置","nro":29,"url":"../images/006tNbRwly1fy2x2zk1hhj30ee0h9jtg.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy 配置","attributes":{},"skip":false,"key":"3.3.1"},{"backlink":"data-plane/envoy-proxy-config-deep-dive.html#fig3.3.2","level":"3.3","list_caption":"Figure: bootstrap 配置","alt":"bootstrap 配置","nro":30,"url":"../images/006tNbRwly1fy2xid761zj30c70ai0tj.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"bootstrap 配置","attributes":{},"skip":false,"key":"3.3.2"},{"backlink":"data-plane/envoy-api.html#fig3.4.1","level":"3.4","list_caption":"Figure: Envoy proxy 架构图","alt":"Envoy proxy 架构图","nro":31,"url":"../images/006tNc79ly1fz69bsaqk7j314k0tsq90.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy proxy 架构图","attributes":{},"skip":false,"key":"3.4.1"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.1","level":"3.5","list_caption":"Figure: ACK 后的版本更新","alt":"ACK 后的版本更新","nro":32,"url":"../images/7e0ee03agy1fvmxs5aod1j20cc06y74c.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"ACK 后的版本更新","attributes":{},"skip":false,"key":"3.5.1"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.2","level":"3.5","list_caption":"Figure: NACK 无版本更新","alt":"NACK 无版本更新","nro":33,"url":"../images/7e0ee03agy1fvmxtjqtcsj20cc06y0ss.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"NACK 无版本更新","attributes":{},"skip":false,"key":"3.5.2"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.3","level":"3.5","list_caption":"Figure: ACK 紧接着 NACK","alt":"ACK 紧接着 NACK","nro":34,"url":"../images/7e0ee03agy1fvmxtwzc96j20cc0923yp.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"ACK 紧接着 NACK","attributes":{},"skip":false,"key":"3.5.3"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.4","level":"3.5","list_caption":"Figure: 一个流上多个 EDS 请求","alt":"一个流上多个 EDS 请求","nro":35,"url":"../images/7e0ee03agy1fvmxuviiqsj20eh06ymx9.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"一个流上多个 EDS 请求","attributes":{},"skip":false,"key":"3.5.4"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.5","level":"3.5","list_caption":"Figure: 不同流上的多个 EDS 请求","alt":"不同流上的多个 EDS 请求","nro":36,"url":"../images/7e0ee03agy1fvmxv7cv21j20j20a4wet.jpg","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"不同流上的多个 EDS 请求","attributes":{},"skip":false,"key":"3.5.5"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.6","level":"3.5","list_caption":"Figure: CDS 响应导致 EDS 资源更新","alt":"CDS 响应导致 EDS 资源更新","nro":37,"url":"../images/006tNc79ly1fvph0p7u8zj31fm0lq0ve.jpg","index":6,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"CDS 响应导致 EDS 资源更新","attributes":{},"skip":false,"key":"3.5.6"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.7","level":"3.5","list_caption":"Figure: EDS 更新速率激发 nonces","alt":"EDS 更新速率激发 nonces","nro":38,"url":"../images/006tNc79ly1fvph04ln3fj31kw0rogqc.jpg","index":7,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"EDS 更新速率激发 nonces","attributes":{},"skip":false,"key":"3.5.7"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.8","level":"3.5","list_caption":"Figure: 请求变的陈旧","alt":"请求变的陈旧","nro":39,"url":"../images/006tNc79ly1fvpgy6xewrj31b415ctcy.jpg","index":8,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"请求变的陈旧","attributes":{},"skip":false,"key":"3.5.8"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.9","level":"3.5","list_caption":"Figure: EDS/CDS 在一个 ADS 流上多路复用","alt":"EDS/CDS 在一个 ADS 流上多路复用","nro":40,"url":"../images/006tNc79ly1fvpgxnl947j313q0wgq62.jpg","index":9,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"EDS/CDS 在一个 ADS 流上多路复用","attributes":{},"skip":false,"key":"3.5.9"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.10","level":"3.5","list_caption":"Figure: 增量 session 示例","alt":"增量 session 示例","nro":41,"url":"../images/006tNc79ly1fvpgwfbep7j31kw0vldli.jpg","index":10,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"增量 session 示例","attributes":{},"skip":false,"key":"3.5.10"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.5.11","level":"3.5","list_caption":"Figure: 增量重连示例","alt":"增量重连示例","nro":42,"url":"../images/006tNc79ly1fvpgx05z3kj31kw0phwif.jpg","index":11,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"增量重连示例","attributes":{},"skip":false,"key":"3.5.11"},{"backlink":"setup/quick-start.html#fig5.1.1","level":"5.1","list_caption":"Figure: 观看视频","alt":"观看视频","nro":43,"url":"../images/006tNbRwly1fyq0a5nx1pj30zk0k0whm.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"观看视频","attributes":{},"skip":false,"key":"5.1.1"},{"backlink":"setup/quick-start.html#fig5.1.2","level":"5.1","list_caption":"Figure: Kubernetes dashboard","alt":"Kubernetes dashboard","nro":44,"url":"https://github.com/rootsongjc/kubernetes-vagrant-centos-cluster/raw/master/images/dashboard-animation.gif","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Kubernetes dashboard","attributes":{},"skip":false,"key":"5.1.2"},{"backlink":"setup/quick-start.html#fig5.1.3","level":"5.1","list_caption":"Figure: Grafana 界面","alt":"Grafana 界面","nro":45,"url":"https://github.com/rootsongjc/kubernetes-vagrant-centos-cluster/raw/master/images/grafana-animation.gif","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Grafana 界面","attributes":{},"skip":false,"key":"5.1.3"},{"backlink":"setup/quick-start.html#fig5.1.4","level":"5.1","list_caption":"Figure: Traefik Ingress controller","alt":"Traefik Ingress controller","nro":46,"url":"https://github.com/rootsongjc/kubernetes-vagrant-centos-cluster/raw/master/images/traefik-ingress.gif","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Traefik Ingress controller","attributes":{},"skip":false,"key":"5.1.4"},{"backlink":"setup/quick-start.html#fig5.1.5","level":"5.1","list_caption":"Figure: Bookinfo Demo","alt":"Bookinfo Demo","nro":47,"url":"https://github.com/rootsongjc/kubernetes-vagrant-centos-cluster/raw/master/images/bookinfo-demo.gif","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Bookinfo Demo","attributes":{},"skip":false,"key":"5.1.5"},{"backlink":"setup/quick-start.html#fig5.1.6","level":"5.1","list_caption":"Figure: vistio 页面","alt":"vistio 页面","nro":48,"url":"https://github.com/rootsongjc/kubernetes-vagrant-centos-cluster/raw/master/images/vistio-animation.gif","index":6,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"vistio 页面","attributes":{},"skip":false,"key":"5.1.6"},{"backlink":"setup/quick-start.html#fig5.1.7","level":"5.1","list_caption":"Figure: kiali","alt":"kiali","nro":49,"url":"https://github.com/rootsongjc/kubernetes-vagrant-centos-cluster/raw/master/images/kiali.gif","index":7,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"kiali","attributes":{},"skip":false,"key":"5.1.7"},{"backlink":"setup/quick-start.html#fig5.1.8","level":"5.1","list_caption":"Figure: Weave scope动画","alt":"Weave scope动画","nro":50,"url":"https://github.com/rootsongjc/kubernetes-vagrant-centos-cluster/raw/master/images/weave-scope-animation.gif","index":8,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Weave scope动画","attributes":{},"skip":false,"key":"5.1.8"},{"backlink":"setup/istio-installation.html#fig5.2.1","level":"5.2","list_caption":"Figure: Istio Helm Chart Cheatsheet(原图来自沈旭光)","alt":"Istio Helm Chart Cheatsheet(原图来自沈旭光)","nro":51,"url":"../images/istio-chart-cheatsheet.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio Helm Chart Cheatsheet(原图来自沈旭光)","attributes":{},"skip":false,"key":"5.2.1"},{"backlink":"setup/istio-installation.html#fig5.2.2","level":"5.2","list_caption":"Figure: Istio CRD Cheatsheet(原图来自沈旭光)","alt":"Istio CRD Cheatsheet(原图来自沈旭光)","nro":52,"url":"../images/istio-crd-cheatsheet.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio CRD Cheatsheet(原图来自沈旭光)","attributes":{},"skip":false,"key":"5.2.2"},{"backlink":"ecosystem/slime.html#fig7.2.1.1","level":"7.2.1","list_caption":"Figure: Slime 内部架构图","alt":"Slime 内部架构图","nro":53,"url":"../images/slime-internal-arch.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Slime 内部架构图","attributes":{},"skip":false,"key":"7.2.1.1"},{"backlink":"ecosystem/slime.html#fig7.2.1.2","level":"7.2.1","list_caption":"Figure: Slime 工作流程图","alt":"Slime 工作流程图","nro":54,"url":"../images/slime-flow-chart.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Slime 工作流程图","attributes":{},"skip":false,"key":"7.2.1.2"},{"backlink":"ecosystem/slime.html#fig7.2.1.3","level":"7.2.1","list_caption":"Figure: Slime 的自适应限流流程图","alt":"Slime 的自适应限流流程图","nro":55,"url":"../images/slime-smart-limiter.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Slime 的自适应限流流程图","attributes":{},"skip":false,"key":"7.2.1.3"},{"backlink":"action/bookinfo-sample.html#fig9.1.1","level":"9.1","list_caption":"Figure: Istio 的 Bookinfo 示例应用架构图","alt":"Istio 的 Bookinfo 示例应用架构图","nro":56,"url":"../images/006tNbRwgy1fvlwjd3302j31bo0ro0x5.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 的 Bookinfo 示例应用架构图","attributes":{},"skip":false,"key":"9.1.1"},{"backlink":"action/bookinfo-sample.html#fig9.1.2","level":"9.1","list_caption":"Figure: Bookinfo 示例与 Istio 的整体架构图","alt":"Bookinfo 示例与 Istio 的整体架构图","nro":57,"url":"../images/bookinfo-application-traffic-route-and-connections-within-istio-service-mesh.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Bookinfo 示例与 Istio 的整体架构图","attributes":{},"skip":false,"key":"9.1.2"}]},"title":"Istio 服务网格——云原生应用网络构建指南 ","language":"zh-hans","links":{"sidebar":{"回到主页":"https://jimmysong.io","云原生社区":"https://cloudnative.to/","Istio 官网（中文）":"https://istio.io/latest/zh/","Kubernetes中文指南/云原生应用架构实践手册 by Jimmy Song(宋净超)":"https://jimmysong.io/kubernetes-handbook/"}},"gitbook":"*","description":"Istio 服务网格——云原生应用网络构建指南"},"file":{"path":"data-plane/envoy-proxy-config-deep-dive.md","mtime":"2022-02-23T08:26:15.822Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-23T08:26:39.850Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Envoy proxy 配置详解","level":"3.4","depth":1,"next":{"title":"Envoy API","level":"3.5","depth":1,"path":"data-plane/envoy-api.md","ref":"data-plane/envoy-api.md","articles":[]},"previous":{"title":"Istio sidecar proxy 配置","level":"3.3","depth":1,"path":"data-plane/istio-sidecar-proxy-config.md","ref":"data-plane/istio-sidecar-proxy-config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","lightbox","ga","hide-element","expandable-chapters-small","insert-logo","adsense"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2017-2022 | Distributed under <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY 4.0</a> | <a href=https://jimmysong.io>jimmysong.io</a>","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/rootsongjc/istio-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/rootsongjc/istio-handbook/blob/master/"},"splitter":{},"adsense":{"client":"ca-pub-4029167986768912","slot":"2445941692","format":"auto","element":".page-inner section","position":"bottom"},"codesnippet":{},"sitemap-general":{"prefix":"https://jimmysong.io/istio-handbook/"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"rootsongjc/istio-handbook","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"11f7d254cfa4e0ca44b175c66d379ecc"},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-93485976-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 30px","url":"https://jimmysong.io/images/logo-black-text.png"},"search-plus":{},"image-captions":{"caption":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Jimmy Song（宋净超）","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"concepts/what-is-service-mesh.html#fig1.2.1","level":"1.2","list_caption":"Figure: Service Mesh 架构图","alt":"Service Mesh 架构图","nro":1,"url":"../images/00704eQkly1fswh7dbs1pj30id0bpmxl.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Service Mesh 架构图","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"concepts/why-service-mesh.html#fig1.3.1","level":"1.3","list_caption":"Figure: 微服务架构","alt":"微服务架构","nro":2,"url":"../images/008i3skNly1gt2kidx2v7j30zk0k03za.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"微服务架构","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"concepts/why-service-mesh.html#fig1.3.2","level":"1.3","list_caption":"Figure: 通信逻辑","alt":"通信逻辑","nro":3,"url":"../images/008i3skNly1gt2kiyf8ymj30zk0k074v.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"通信逻辑","attributes":{},"skip":false,"key":"1.3.2"},{"backlink":"concepts/why-service-mesh.html#fig1.3.3","level":"1.3","list_caption":"Figure: Sidecar 代理","alt":"Sidecar 代理","nro":4,"url":"../images/008i3skNly1gt2kj8kf84j30zk0k0t9s.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar 代理","attributes":{},"skip":false,"key":"1.3.3"},{"backlink":"concepts/the-application-networking-in-post-kubernetes-era.html#fig1.4.1","level":"1.4","list_caption":"Figure: kubernetes vs service mesh","alt":"kubernetes vs service mesh","nro":5,"url":"../images/k8s-vs-service-mesh.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"kubernetes vs service mesh","attributes":{},"skip":false,"key":"1.4.1"},{"backlink":"concepts/the-application-networking-in-post-kubernetes-era.html#fig1.4.2","level":"1.4","list_caption":"Figure: 服务发现","alt":"服务发现","nro":6,"url":"../images/service-discovery.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"服务发现","attributes":{},"skip":false,"key":"1.4.2"},{"backlink":"concepts/the-application-networking-in-post-kubernetes-era.html#fig1.4.3","level":"1.4","list_caption":"Figure: Envoy proxy 架构图","alt":"Envoy proxy 架构图","nro":7,"url":"../images/envoy-arch.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy proxy 架构图","attributes":{},"skip":false,"key":"1.4.3"},{"backlink":"concepts/the-application-networking-in-post-kubernetes-era.html#fig1.4.4","level":"1.4","list_caption":"Figure: Istio","alt":"Istio","nro":8,"url":"../images/istio-arch.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio","attributes":{},"skip":false,"key":"1.4.4"},{"backlink":"concepts/service-mesh-architectures.html#fig2.2.1","level":"2.2","list_caption":"Figure: 服务网格的部署模式","alt":"服务网格的部署模式","nro":9,"url":"../images/service-mesh-deployment-models.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"服务网格的部署模式","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"concepts/service-mesh-patterns.html#fig2.2.1.1","level":"2.2.1","list_caption":"Figure: 服务网格 架构示意图","alt":"服务网格 架构示意图","nro":10,"url":"../images/006tNbRwly1fubs6ts3sgj30vo0osdnj.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"服务网格 架构示意图","attributes":{},"skip":false,"key":"2.2.1.1"},{"backlink":"concepts/service-mesh-patterns.html#fig2.2.1.2","level":"2.2.1","list_caption":"Figure: Ingress 或边缘代理架构示意图","alt":"Ingress 或边缘代理架构示意图","nro":11,"url":"../images/006tNbRwly1fubsk4v16hj30vo0bq75z.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Ingress 或边缘代理架构示意图","attributes":{},"skip":false,"key":"2.2.1.2"},{"backlink":"concepts/service-mesh-patterns.html#fig2.2.1.3","level":"2.2.1","list_caption":"Figure: 路由器网格架构示意图","alt":"路由器网格架构示意图","nro":12,"url":"../images/006tNbRwly1fubsxrph3dj30vq0duq53.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"路由器网格架构示意图","attributes":{},"skip":false,"key":"2.2.1.3"},{"backlink":"concepts/service-mesh-patterns.html#fig2.2.1.4","level":"2.2.1","list_caption":"Figure: Proxy per node 架构示意图","alt":"Proxy per node 架构示意图","nro":13,"url":"../images/006tNbRwly1fubt5a97h7j30vq0bcq5p.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Proxy per node 架构示意图","attributes":{},"skip":false,"key":"2.2.1.4"},{"backlink":"concepts/service-mesh-patterns.html#fig2.2.1.5","level":"2.2.1","list_caption":"Figure: Sidecar代理/Fabric模型示意图","alt":"Sidecar代理/Fabric模型示意图","nro":14,"url":"../images/006tNbRwly1fubvi0dnhlj30vo0ekwhx.jpg","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar代理/Fabric模型示意图","attributes":{},"skip":false,"key":"2.2.1.5"},{"backlink":"concepts/service-mesh-patterns.html#fig2.2.1.6","level":"2.2.1","list_caption":"Figure: Sidecar 代理/控制平面架构示意图","alt":"Sidecar 代理/控制平面架构示意图","nro":15,"url":"../images/006tNbRwly1fubvr83wvgj30vq0mmdip.jpg","index":6,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar 代理/控制平面架构示意图","attributes":{},"skip":false,"key":"2.2.1.6"},{"backlink":"concepts/istio-intro.html#fig2.2.2.1","level":"2.2.2","list_caption":"Figure: Istio 架构","alt":"Istio 架构","nro":16,"url":"../images/008i3skNly1gtbszxamwcj60zk0k0mzk02.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 架构","attributes":{},"skip":false,"key":"2.2.2.1"},{"backlink":"concepts/istio-architecture.html#fig2.2.3.1","level":"2.2.3","list_caption":"Figure: Istio 的部署架构","alt":"Istio 的部署架构","nro":17,"url":"../images/istio-models.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 的部署架构","attributes":{},"skip":false,"key":"2.2.3.1"},{"backlink":"concepts/istio-architecture.html#fig2.2.3.2","level":"2.2.3","list_caption":"Figure: Sidecar 模式","alt":"Sidecar 模式","nro":18,"url":"../images/sidecar-mode.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar 模式","attributes":{},"skip":false,"key":"2.2.3.2"},{"backlink":"concepts/istio-architecture.html#fig2.2.3.3","level":"2.2.3","list_caption":"Figure: Proxyless 模式","alt":"Proxyless 模式","nro":19,"url":"../images/proxyless-mode.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Proxyless 模式","attributes":{},"skip":false,"key":"2.2.3.3"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.3.1.1","level":"2.3.1","list_caption":"Figure: iptables 调用链","alt":"iptables 调用链","nro":20,"url":"../images/0069RVTdly1fv5hukl647j30k6145gnt.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"iptables 调用链","attributes":{},"skip":false,"key":"2.3.1.1"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.3.1.2","level":"2.3.1","list_caption":"Figure: iptables 调用链","alt":"iptables 调用链","nro":21,"url":"../images/0069RVTdgy1fv5dq2bptdj31110begnl.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"iptables 调用链","attributes":{},"skip":false,"key":"2.3.1.2"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.3.1.3","level":"2.3.1","list_caption":"Figure: iptables结构图","alt":"iptables结构图","nro":22,"url":"../images/0069RVTdgy1fv5dm4a9ygj30w50czdi3.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"iptables结构图","attributes":{},"skip":false,"key":"2.3.1.3"},{"backlink":"concepts/sidecar-injection-deep-dive.html#fig2.3.1.4","level":"2.3.1","list_caption":"Figure: Envoy sidecar 流量劫持流程示意图","alt":"Envoy sidecar 流量劫持流程示意图","nro":23,"url":"../images/envoy-sidecar-traffic-interception-zh-20210818.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy sidecar 流量劫持流程示意图","attributes":{},"skip":false,"key":"2.3.1.4"},{"backlink":"concepts/istio-sidecar-injector.html#fig2.3.2.1","level":"2.3.2","list_caption":"Figure: Sidecar 注入流程图","alt":"Sidecar 注入流程图","nro":24,"url":"../images/006tKfTcly1g0bvoxmfvuj311i0fy0vh.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Sidecar 注入流程图","attributes":{},"skip":false,"key":"2.3.2.1"},{"backlink":"concepts/traffic-management-basic.html#fig2.4.1.1","level":"2.4.1","list_caption":"Figure: istio ingress gateway pod","alt":"istio ingress gateway pod","nro":25,"url":"../images/0069RVTdgy1fv7xh71h8fj31fn0dyq9g.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"istio ingress gateway pod","attributes":{},"skip":false,"key":"2.4.1.1"},{"backlink":"concepts/traffic-management-basic.html#fig2.4.1.2","level":"2.4.1","list_caption":"Figure: VirtualSerivce 和 DestimationRule 示意图","alt":"VirtualSerivce 和 DestimationRule 示意图","nro":26,"url":"../images/istio-virtualservice-and-destinationrule-illustration.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"VirtualSerivce 和 DestimationRule 示意图","attributes":{},"skip":false,"key":"2.4.1.2"},{"backlink":"concepts/sidecar-traffic-routing-deep-dive.html#fig2.4.2.1","level":"2.4.2","list_caption":"Figure: Bookinfo 示例","alt":"Bookinfo 示例","nro":27,"url":"../images/006tNbRwgy1fvlwjd3302j31bo0ro0x5.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Bookinfo 示例","attributes":{},"skip":false,"key":"2.4.2.1"},{"backlink":"concepts/sidecar-traffic-routing-deep-dive.html#fig2.4.2.2","level":"2.4.2","list_caption":"Figure: Envoy sidecar 流量劫持与路由转发示意图","alt":"Envoy sidecar 流量劫持与路由转发示意图","nro":28,"url":"../images/envoy-sidecar-traffic-interception-zh-20210818.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy sidecar 流量劫持与路由转发示意图","attributes":{},"skip":false,"key":"2.4.2.2"},{"backlink":"data-plane/istio-sidecar-proxy-config.html#fig3.3.1","level":"3.3","list_caption":"Figure: Envoy 配置","alt":"Envoy 配置","nro":29,"url":"../images/006tNbRwly1fyb74brsd5j30xg0lojvt.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy 配置","attributes":{},"skip":false,"key":"3.3.1"},{"backlink":"data-plane/envoy-proxy-config-deep-dive.html#fig3.4.1","level":"3.4","list_caption":"Figure: Envoy 配置","alt":"Envoy 配置","nro":30,"url":"../images/006tNbRwly1fy2x2zk1hhj30ee0h9jtg.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy 配置","attributes":{},"skip":false,"key":"3.4.1"},{"backlink":"data-plane/envoy-proxy-config-deep-dive.html#fig3.4.2","level":"3.4","list_caption":"Figure: bootstrap 配置","alt":"bootstrap 配置","nro":31,"url":"../images/006tNbRwly1fy2xid761zj30c70ai0tj.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"bootstrap 配置","attributes":{},"skip":false,"key":"3.4.2"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.1","level":"3.6","list_caption":"Figure: ACK 后的版本更新","alt":"ACK 后的版本更新","nro":32,"url":"../images/7e0ee03agy1fvmxs5aod1j20cc06y74c.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"ACK 后的版本更新","attributes":{},"skip":false,"key":"3.6.1"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.2","level":"3.6","list_caption":"Figure: NACK 无版本更新","alt":"NACK 无版本更新","nro":33,"url":"../images/7e0ee03agy1fvmxtjqtcsj20cc06y0ss.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"NACK 无版本更新","attributes":{},"skip":false,"key":"3.6.2"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.3","level":"3.6","list_caption":"Figure: ACK 紧接着 NACK","alt":"ACK 紧接着 NACK","nro":34,"url":"../images/7e0ee03agy1fvmxtwzc96j20cc0923yp.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"ACK 紧接着 NACK","attributes":{},"skip":false,"key":"3.6.3"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.4","level":"3.6","list_caption":"Figure: 一个流上多个 EDS 请求","alt":"一个流上多个 EDS 请求","nro":35,"url":"../images/7e0ee03agy1fvmxuviiqsj20eh06ymx9.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"一个流上多个 EDS 请求","attributes":{},"skip":false,"key":"3.6.4"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.5","level":"3.6","list_caption":"Figure: 不同流上的多个 EDS 请求","alt":"不同流上的多个 EDS 请求","nro":36,"url":"../images/7e0ee03agy1fvmxv7cv21j20j20a4wet.jpg","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"不同流上的多个 EDS 请求","attributes":{},"skip":false,"key":"3.6.5"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.6","level":"3.6","list_caption":"Figure: CDS 响应导致 EDS 资源更新","alt":"CDS 响应导致 EDS 资源更新","nro":37,"url":"../images/006tNc79ly1fvph0p7u8zj31fm0lq0ve.jpg","index":6,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"CDS 响应导致 EDS 资源更新","attributes":{},"skip":false,"key":"3.6.6"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.7","level":"3.6","list_caption":"Figure: EDS 更新速率激发 nonces","alt":"EDS 更新速率激发 nonces","nro":38,"url":"../images/006tNc79ly1fvph04ln3fj31kw0rogqc.jpg","index":7,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"EDS 更新速率激发 nonces","attributes":{},"skip":false,"key":"3.6.7"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.8","level":"3.6","list_caption":"Figure: 请求变的陈旧","alt":"请求变的陈旧","nro":39,"url":"../images/006tNc79ly1fvpgy6xewrj31b415ctcy.jpg","index":8,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"请求变的陈旧","attributes":{},"skip":false,"key":"3.6.8"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.9","level":"3.6","list_caption":"Figure: EDS/CDS 在一个 ADS 流上多路复用","alt":"EDS/CDS 在一个 ADS 流上多路复用","nro":40,"url":"../images/006tNc79ly1fvpgxnl947j313q0wgq62.jpg","index":9,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"EDS/CDS 在一个 ADS 流上多路复用","attributes":{},"skip":false,"key":"3.6.9"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.10","level":"3.6","list_caption":"Figure: 增量 session 示例","alt":"增量 session 示例","nro":41,"url":"../images/006tNc79ly1fvpgwfbep7j31kw0vldli.jpg","index":10,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"增量 session 示例","attributes":{},"skip":false,"key":"3.6.10"},{"backlink":"data-plane/envoy-xds-protocol.html#fig3.6.11","level":"3.6","list_caption":"Figure: 增量重连示例","alt":"增量重连示例","nro":42,"url":"../images/006tNc79ly1fvpgx05z3kj31kw0phwif.jpg","index":11,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"增量重连示例","attributes":{},"skip":false,"key":"3.6.11"},{"backlink":"setup/getmesh.html#fig4.3.1","level":"4.3","list_caption":"Figure: Foo and bar","alt":"Foo and bar","nro":43,"url":"../images/008i3skNly1gtbyop8i9hj611g0q4ta402.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Foo and bar","attributes":{},"skip":false,"key":"4.3.1"},{"backlink":"setup/bookinfo-sample.html#fig4.5.1","level":"4.5","list_caption":"Figure: Istio 的 Bookinfo 示例应用架构图","alt":"Istio 的 Bookinfo 示例应用架构图","nro":44,"url":"../images/006tNbRwgy1fvlwjd3302j31bo0ro0x5.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 的 Bookinfo 示例应用架构图","attributes":{},"skip":false,"key":"4.5.1"},{"backlink":"setup/bookinfo-sample.html#fig4.5.2","level":"4.5","list_caption":"Figure: Bookinfo 示例与 Istio 的整体架构图","alt":"Bookinfo 示例与 Istio 的整体架构图","nro":45,"url":"../images/bookinfo-application-traffic-route-and-connections-within-istio-service-mesh.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Bookinfo 示例与 Istio 的整体架构图","attributes":{},"skip":false,"key":"4.5.2"},{"backlink":"traffic-management/gateway.html#fig6.2.1","level":"6.2","list_caption":"Figure: 入口和出口网关","alt":"入口和出口网关","nro":46,"url":"../images/008i3skNly1gsy17fz49vj318g0p0jto.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"入口和出口网关","attributes":{},"skip":false,"key":"6.2.1"},{"backlink":"traffic-management/gateway.html#fig6.2.2","level":"6.2","list_caption":"Figure: Gateway 和 VirtualService","alt":"Gateway 和 VirtualService","nro":47,"url":"../images/008i3skNly1gtcwbmwin2j61op0u0gp802.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Gateway 和 VirtualService","attributes":{},"skip":false,"key":"6.2.2"},{"backlink":"traffic-management/basic-routing.html#fig6.3.1","level":"6.3","list_caption":"Figure: 路由到 Customers","alt":"路由到 Customers","nro":48,"url":"../images/008i3skNly1gsy1ucw0ejj318g0p0q4n.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"路由到 Customers","attributes":{},"skip":false,"key":"6.3.1"},{"backlink":"traffic-management/basic-routing.html#fig6.3.2","level":"6.3","list_caption":"Figure: Gateway 配置","alt":"Gateway 配置","nro":49,"url":"../images/gateway-config.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Gateway 配置","attributes":{},"skip":false,"key":"6.3.2"},{"backlink":"observability/prometheus.html#fig7.2.1","level":"7.2","list_caption":"Figure: Prometheus dashboard","alt":"Prometheus dashboard","nro":50,"url":"../images/008i3skNly1gtbzzswso1j60dw0jkdgq02.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Prometheus dashboard","attributes":{},"skip":false,"key":"7.2.1"},{"backlink":"observability/grafana.html#fig7.3.1","level":"7.3","list_caption":"Figure: Grafana 仪表板","alt":"Grafana 仪表板","nro":51,"url":"../images/008i3skNly1gsxzlwj8nhj60i50hoq3q02.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Grafana 仪表板","attributes":{},"skip":false,"key":"7.3.1"},{"backlink":"observability/grafana.html#fig7.3.2","level":"7.3","list_caption":"Figure: Istio 控制平面仪表板","alt":"Istio 控制平面仪表板","nro":52,"url":"../images/008i3skNly1gsxzp9t40gj30vu0ss41r.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 控制平面仪表板","attributes":{},"skip":false,"key":"7.3.2"},{"backlink":"observability/grafana.html#fig7.3.3","level":"7.3","list_caption":"Figure: Istio 网格仪表板","alt":"Istio 网格仪表板","nro":53,"url":"../images/008i3skNly1gsxztuxt4sj30su0rfgny.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 网格仪表板","attributes":{},"skip":false,"key":"7.3.3"},{"backlink":"observability/grafana.html#fig7.3.4","level":"7.3","list_caption":"Figure: Istio 性能仪表板","alt":"Istio 性能仪表板","nro":54,"url":"../images/008i3skNly1gsxzvfrchmj30rw0um41m.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 性能仪表板","attributes":{},"skip":false,"key":"7.3.4"},{"backlink":"observability/grafana.html#fig7.3.5","level":"7.3","list_caption":"Figure: Istio 服务仪表板","alt":"Istio 服务仪表板","nro":55,"url":"../images/008i3skNly1gsxzz72kwzj30rw0umq6r.jpg","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 服务仪表板","attributes":{},"skip":false,"key":"7.3.5"},{"backlink":"observability/grafana.html#fig7.3.6","level":"7.3","list_caption":"Figure: Istio Wasm 扩展仪表板","alt":"Istio Wasm 扩展仪表板","nro":56,"url":"../images/008i3skNly1gtcuxkthdpj60ua0u0mzk02.jpg","index":6,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio Wasm 扩展仪表板","attributes":{},"skip":false,"key":"7.3.6"},{"backlink":"observability/grafana.html#fig7.3.7","level":"7.3","list_caption":"Figure: Istio 工作负载仪表板","alt":"Istio 工作负载仪表板","nro":57,"url":"../images/008i3skNly1gsy00w9qlxj30rw0umq65.jpg","index":7,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Istio 工作负载仪表板","attributes":{},"skip":false,"key":"7.3.7"},{"backlink":"observability/zipkin.html#fig7.4.1","level":"7.4","list_caption":"Figure: Zipkin Dashboard","alt":"Zipkin Dashboard","nro":58,"url":"../images/008i3skNly1gtcve3g0u9j60u011p78i02.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Zipkin Dashboard","attributes":{},"skip":false,"key":"7.4.1"},{"backlink":"observability/zipkin.html#fig7.4.2","level":"7.4","list_caption":"Figure: Zipkin trace 详情","alt":"Zipkin trace 详情","nro":59,"url":"../images/008i3skNly1gsy0uk0lr1j310r0u0ad6.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Zipkin trace 详情","attributes":{},"skip":false,"key":"7.4.2"},{"backlink":"observability/kiali.html#fig7.5.1","level":"7.5","list_caption":"Figure: Kiali Graph","alt":"Kiali Graph","nro":60,"url":"../images/008i3skNly1gsy0z4tsg2j60u010s76d02.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Kiali Graph","attributes":{},"skip":false,"key":"7.5.1"},{"backlink":"security/authn.html#fig8.2.1","level":"8.2","list_caption":"Figure: 证书和秘钥管理","alt":"证书和秘钥管理","nro":61,"url":"../images/008i3skNly1gt2jte9a2vj30zk0k0q4l.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"证书和秘钥管理","attributes":{},"skip":false,"key":"8.2.1"},{"backlink":"security/authn.html#fig8.2.2","level":"8.2","list_caption":"Figure: 身份签发流程","alt":"身份签发流程","nro":62,"url":"../images/008i3skNly1gt2jys4b01j30mh0k0754.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"身份签发流程","attributes":{},"skip":false,"key":"8.2.2"},{"backlink":"advanced/multicluster-deployment.html#fig9.2.1","level":"9.2","list_caption":"Figure: 多集群服务网格","alt":"多集群服务网格","nro":63,"url":"../images/008i3skNly1gt2l4i9ldbj30zk0k00uv.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"多集群服务网格","attributes":{},"skip":false,"key":"9.2.1"},{"backlink":"advanced/multicluster-deployment.html#fig9.2.2","level":"9.2","list_caption":"Figure: 多网络服务网格","alt":"多网络服务网格","nro":64,"url":"../images/008i3skNly1gt2l9omy7vj30zk0k03zq.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"多网络服务网格","attributes":{},"skip":false,"key":"9.2.2"},{"backlink":"advanced/multicluster-deployment.html#fig9.2.3","level":"9.2","list_caption":"Figure: 共享的控制平面","alt":"共享的控制平面","nro":65,"url":"../images/008i3skNly1gt2lehzmbzj30zk0k00u7.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"共享的控制平面","attributes":{},"skip":false,"key":"9.2.3"},{"backlink":"advanced/multicluster-deployment.html#fig9.2.4","level":"9.2","list_caption":"Figure: 多个控制平面","alt":"多个控制平面","nro":66,"url":"../images/008i3skNly1gt2lfmz9d9j30zk0k0tb7.jpg","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"多个控制平面","attributes":{},"skip":false,"key":"9.2.4"},{"backlink":"advanced/multicluster-deployment.html#fig9.2.5","level":"9.2","list_caption":"Figure: 多集群共享命名空间","alt":"多集群共享命名空间","nro":67,"url":"../images/008i3skNly1gt2lnhq0qfj30zk0k0wgp.jpg","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"多集群共享命名空间","attributes":{},"skip":false,"key":"9.2.5"},{"backlink":"advanced/vm.html#fig9.3.1","level":"9.3","list_caption":"Figure: 单网络架构","alt":"单网络架构","nro":68,"url":"../images/008i3skNly1gtd5xr6iczj60vr0j70uc02.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"单网络架构","attributes":{},"skip":false,"key":"9.3.1"},{"backlink":"advanced/vm.html#fig9.3.2","level":"9.3","list_caption":"Figure: 多网络架构","alt":"多网络架构","nro":69,"url":"../images/008i3skNly1gtd62xkbgij60vr0j7jt702.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"多网络架构","attributes":{},"skip":false,"key":"9.3.2"},{"backlink":"troubleshooting/envoy-basic.html#fig10.2.1","level":"10.2","list_caption":"Figure: Envoy 概念与 Istio 和 Kubernetes 的映射","alt":"Envoy 概念与 Istio 和 Kubernetes 的映射","nro":70,"url":"../images/008i3skNly1gtd68759rlj60zk0k0acj02.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy 概念与 Istio 和 Kubernetes 的映射","attributes":{},"skip":false,"key":"10.2.1"},{"backlink":"troubleshooting/envoy-sample.html#fig10.3.1","level":"10.3","list_caption":"Figure: Envoy 详情","alt":"Envoy 详情","nro":71,"url":"../images/008i3skNly1gt2p7osd79j30zk0k0mzf.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Envoy 详情","attributes":{},"skip":false,"key":"10.3.1"},{"backlink":"ecosystem/slime.html#fig11.2.1","level":"11.2","list_caption":"Figure: Slime 内部架构图","alt":"Slime 内部架构图","nro":72,"url":"../images/slime-internal-arch.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Slime 内部架构图","attributes":{},"skip":false,"key":"11.2.1"},{"backlink":"ecosystem/slime.html#fig11.2.2","level":"11.2","list_caption":"Figure: Slime 工作流程图","alt":"Slime 工作流程图","nro":73,"url":"../images/slime-flow-chart.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Slime 工作流程图","attributes":{},"skip":false,"key":"11.2.2"},{"backlink":"ecosystem/slime.html#fig11.2.3","level":"11.2","list_caption":"Figure: Slime 的自适应限流流程图","alt":"Slime 的自适应限流流程图","nro":74,"url":"../images/slime-smart-limiter.jpg","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Slime 的自适应限流流程图","attributes":{},"skip":false,"key":"11.2.3"},{"backlink":"practice/create-cluster.html#fig12.2.1","level":"12.2","list_caption":"Figure: 部署在 GCP 中的 Kubernetes 集群","alt":"部署在 GCP 中的 Kubernetes 集群","nro":75,"url":"../images/008i3skNly1gteb2j2o53j30o206jdgb.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"部署在 GCP 中的 Kubernetes 集群","attributes":{},"skip":false,"key":"12.2.1"},{"backlink":"practice/online-boutique.html#fig12.3.1","level":"12.3","list_caption":"Figure: 前端服务","alt":"前端服务","nro":76,"url":"../images/008i3skNly1gtec50smyvj60x10u0q7g02.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"前端服务","attributes":{},"skip":false,"key":"12.3.1"},{"backlink":"practice/observability.html#fig12.4.1","level":"12.4","list_caption":"Figure: Boutique 应用在 Kiali 中的样子","alt":"Boutique 应用在 Kiali 中的样子","nro":77,"url":"../images/008i3skNly1gtec8rpc6fj60vn0smtb802.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Boutique 应用在 Kiali 中的样子","attributes":{},"skip":false,"key":"12.4.1"},{"backlink":"practice/traffic-routing.html#fig12.5.1","level":"12.5","list_caption":"Figure: 更新后的标头","alt":"更新后的标头","nro":78,"url":"../images/008i3skNly1gteccmga5mj60aa031mx302.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"更新后的标头","attributes":{},"skip":false,"key":"12.5.1"},{"backlink":"practice/traffic-routing.html#fig12.5.2","level":"12.5","list_caption":"Figure: 在 Kiali 中有两个版本","alt":"在 Kiali 中有两个版本","nro":79,"url":"../images/008i3skNly1gteccjeuy9j30fs0aswf4.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在 Kiali 中有两个版本","attributes":{},"skip":false,"key":"12.5.2"},{"backlink":"practice/fault-injection.html#fig12.6.1","level":"12.6","list_caption":"Figure: Recommendations 服务延迟","alt":"Recommendations 服务延迟","nro":80,"url":"../images/008i3skNly1gtecw2e4wkj61qu0u043002.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Recommendations 服务延迟","attributes":{},"skip":false,"key":"12.6.1"},{"backlink":"practice/fault-injection.html#fig12.6.2","level":"12.6","list_caption":"Figure: 注入错误","alt":"注入错误","nro":81,"url":"../images/008i3skNly1gtecw01ervj30y30msjup.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"注入错误","attributes":{},"skip":false,"key":"12.6.2"},{"backlink":"practice/resiliency.html#fig12.7.1","level":"12.7","list_caption":"Figure: Zipkin 中的 trace","alt":"Zipkin 中的 trace","nro":82,"url":"../images/008i3skNly1gtedfgzf6kj32uy0t2wkx.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Zipkin 中的 trace","attributes":{},"skip":false,"key":"12.7.1"}]},"title":"Istio 服务网格——云原生应用网络构建指南 ","language":"zh-hans","links":{"sidebar":{"回到主页":"https://jimmysong.io","云原生社区":"https://cloudnative.to","Istio 官网（中文）":"https://istio.io/latest/zh/","Envoy 基础教程":"https://jimmysong.io/envoy-handbook/","Kubernetes 中文指南":"https://jimmysong.io/kubernetes-handbook/"}},"gitbook":"*","description":"Istio 服务网格——云原生应用网络构建指南"},"file":{"path":"data-plane/envoy-proxy-config-deep-dive.md","mtime":"2022-03-09T03:27:40.725Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-09T03:28:06.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
