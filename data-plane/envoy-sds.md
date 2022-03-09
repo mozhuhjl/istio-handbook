@@ -31,5 +31,3 @@ SDS 支持静态配置也支持动态配置。
 - 通过 Unix Domain Socket 访问 gRPC SDS server。
 - 通过 UDS 访问 gRPC SDS server。
 - 通过 Envoy gRPC 访问 SDS server。
-
-配置详情请参考 [Envoy 官方文档](https://www.envoyproxy.io/docs/envoy/latest/configuration/secret)。
