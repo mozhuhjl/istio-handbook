@@ -1,4 +1,4 @@
-# Slime——基于 Istio 的智能服务网格管理器
+# Slime
 
 [Slime](https://github.com/slime-io/slime/) 是由网易数帆微服务团队开源的一款基于 Istio 的智能网格管理器。Slime 基于 Kubernetes Operator 实现，可作为 Istio 的 CRD 管理器，无须对 Istio 做任何定制化改造，就可以定义动态的服务治理策略，从而达到自动便捷使用 Istio 和 Envoy 高阶功能的目的。
 

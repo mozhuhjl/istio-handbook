@@ -1,6 +1,6 @@
 # SDS（秘钥发现服务）
 
-SDS（秘钥发现服务）是 Envoy 1.8.0 版本起开始引入的服务。可以在 `bootstrap.static_resource` 的 [secrets](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto#envoy-api-field-config-bootstrap-v2-bootstrap-staticresources-secrets) 配置中为 Envoy 指定 TLS 证书（[secret](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto#envoy-api-field-config-bootstrap-v2-bootstrap-staticresources-secrets)）。也可以通过秘钥发现服务（SDS）远程获取。Istio 预计将在 1.1 版本中支持 SDS。
+SDS（秘钥发现服务）是 Envoy 1.8.0 版本起开始引入的服务。可以在 `bootstrap.static_resource` 的 [secrets](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto#envoy-api-field-config-bootstrap-v2-bootstrap-staticresources-secrets) 配置中为 Envoy 指定 TLS 证书（secret）。也可以通过秘钥发现服务（SDS）远程获取。Istio 预计将在 1.1 版本中支持 SDS。
 
 SDS 带来的最大的好处就是简化证书管理。要是没有该功能的话，我们就必须使用 Kubernetes 中的 [secret 资源](https://jimmysong.io/kubernetes-handbook/concepts/secret.html)创建证书，然后把证书挂载到代理容器中。如果证书过期，还需要更新 secret 和需要重新部署代理容器。使用 SDS，中央 SDS 服务器将证书推送到所有 Envoy 实例上。如果证书过期，服务器只需将新证书推送到 Envoy 实例，Envoy 可以立即使用新证书而无需重新部署。
 
@@ -14,7 +14,7 @@ Envoy 代理和 SDS 服务器之间的连接必须是安全的。可以在同一
 
 ## SDS Server
 
-SDS server 需要实现 [SecretDiscoveryService](https://github.com/envoyproxy/envoy/blob/master/api/envoy/service/discovery/v2/sds.proto) 这个 gRPC 服务。遵循与其他 [xDS](https://github.com/envoyproxy/data-plane-api/blob/master/XDS_PROTOCOL.md) 相同的协议。
+SDS server 需要实现 [SecretDiscoveryService](https://github.com/envoyproxy/envoy/blob/main/api/envoy/service/discovery/v2/sds.proto) 这个 gRPC 服务。遵循与其他 xDS 相同的协议。
 
 ## SDS 配置
 

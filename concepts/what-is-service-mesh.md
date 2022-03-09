@@ -69,4 +69,3 @@ Service Mesh 又译作 “服务网格”，作为服务间通信的基础设施
 - [Pattern: Service Mesh - philcalcado.com](http://philcalcado.com/2017/08/03/pattern_service_mesh.html)
 - [Envoy 官方文档中文版 - cloudnative.to](https://cloudnative.to/envoy/)
 - [Istio 官方文档 - istio.io](https://istio.io)
-

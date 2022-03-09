@@ -6,9 +6,10 @@
     "links": {
         "sidebar": {
             "回到主页": "https://jimmysong.io",
-            "云原生社区": "https://cloudnative.to/",
+            "云原生社区": "https://cloudnative.to",
             "Istio 官网（中文）": "https://istio.io/latest/zh/",
-            "Kubernetes中文指南/云原生应用架构实践手册 by Jimmy Song(宋净超)": "https://jimmysong.io/kubernetes-handbook/"
+            "Envoy 基础教程": "https://jimmysong.io/envoy-handbook/",
+            "Kubernetes 中文指南": "https://jimmysong.io/kubernetes-handbook/"
         }
     },
     "plugins": [

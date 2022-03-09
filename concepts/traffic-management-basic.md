@@ -2,17 +2,17 @@
 
 下面将带您了解 Istio 流量管理相关的基础概念与配置示例。
 
-- [`VirtualService`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#virtualservice) 在 Istio 服务网格中定义路由规则，控制流量路由到服务上的各种行为。
-- [`DestinationRule`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#destinationrule) 是 `VirtualService` 路由生效后，配置应用与请求的策略集。
-- [`ServiceEntry`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#serviceentry) 通常用于在 Istio 服务网格之外启用的服务请求。
-- [`Gateway`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#gateway) 为 HTTP/TCP 流量配置负载均衡器，最常见的是在网格边缘的操作，以启用应用程序的入口流量。
-- [`EnvoyFilter`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#envoyfilter) 描述了针对代理服务的过滤器，用来定制由 Istio Pilot 生成的代理配置。一定要谨慎使用此功能。错误的配置内容一旦完成传播，可能会令整个服务网格陷入瘫痪状态。这一配置是用于对 Istio 网络系统内部实现进行变更的。
+- `VirtualService`：在 Istio 服务网格中定义路由规则，控制流量路由到服务上的各种行为。
+- `DestinationRule`：是 `VirtualService` 路由生效后，配置应用与请求的策略集。
+- `ServiceEntry`：通常用于在 Istio 服务网格之外启用的服务请求。
+- `Gateway`：为 HTTP/TCP 流量配置负载均衡器，最常见的是在网格边缘的操作，以启用应用程序的入口流量。
+- `EnvoyFilter`：描述了针对代理服务的过滤器，用来定制由 Istio Pilot 生成的代理配置。一定要谨慎使用此功能。错误的配置内容一旦完成传播，可能会令整个服务网格陷入瘫痪状态。这一配置是用于对 Istio 网络系统内部实现进行变更的。
 
 **注**：本文中的示例引用自 Istio 官方 Bookinfo 示例，见：[Istio 代码库](https://github.com/istio/istio/tree/master/samples/bookinfo/)，且对于配置的讲解都以在 Kubernetes 中部署的服务为准。
 
 ### VirtualService
 
-`VirtualService` 故名思义，就是虚拟服务，在 Istio 1.0 以前叫做 RouteRule。`VirtualService` 中定义了一系列针对指定服务的流量路由规则。每个路由规则都是针对特定协议的匹配规则。如果流量符合这些特征，就会根据规则发送到服务注册表中的目标服务（或者目标服务的子集或版本）。VirtualService 的详细定义和配置请参考[通信路由](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#virtualservice)。
+`VirtualService` 故名思义，就是虚拟服务，在 Istio 1.0 以前叫做 RouteRule。`VirtualService` 中定义了一系列针对指定服务的流量路由规则。每个路由规则都是针对特定协议的匹配规则。如果流量符合这些特征，就会根据规则发送到服务注册表中的目标服务（或者目标服务的子集或版本）。
 
 **注意**：`VirtualService` 中的规则是按照在 YAML 文件中的顺序执行的，这就是为什么在存在多条规则时，需要慎重考虑优先级的原因。
 
@@ -49,20 +49,20 @@ spec:
 
 - 该配置中流量的目标主机是 `reviews`，如果该服务和规则部署在 Kubernetes 的 `default` namespace 下的话，对应于 Kubernetes 中的服务的 DNS 名称就是 `reviews.default.svc.cluster.local`。
 - 我们在 `hosts` 配置了服务的名字只是表示该配置是针对 `reviews.default.svc.cluster.local` 的服务的路由规则，但是具体将对该服务的访问的流量路由到哪些服务的哪些实例上，就是要通过 `destination` 的配置了。 
-- 我们看到上面的 `VirtualService` 的 HTTP 路由中还定义了一个 `destination`。`destination` 用于定义在网络中可寻址的服务，请求或连接在经过路由规则的处理之后，就会被发送给 `destination`。`destination.host` 应该明确指向服务注册表中的一个服务。Istio 的服务注册表除包含平台服务注册表中的所有服务（例如 Kubernetes 服务、Consul 服务）之外，还包含了 [`ServiceEntry`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#serviceentry) 资源所定义的服务。`VirtualService` 中只定义流量发送给哪个服务的路由规则，但是并不知道要发送的服务的地址是什么，这就需要 `DestinationRule` 来定义了。
+- 我们看到上面的 `VirtualService` 的 HTTP 路由中还定义了一个 `destination`。`destination` 用于定义在网络中可寻址的服务，请求或连接在经过路由规则的处理之后，就会被发送给 `destination`。`destination.host` 应该明确指向服务注册表中的一个服务。Istio 的服务注册表除包含平台服务注册表中的所有服务（例如 Kubernetes 服务、Consul 服务）之外，还包含了 `ServiceEntry` 资源所定义的服务。`VirtualService` 中只定义流量发送给哪个服务的路由规则，但是并不知道要发送的服务的地址是什么，这就需要 `DestinationRule` 来定义了。
 - `subset` 配置流量目的地的子集，下文会讲到。`VirtualService` 中其实可以除了 `hosts` 字段外其他什么都不配置，路由规则可以在 `DestinationRule` 中单独配置来覆盖此处的默认规则。
 
 #### Subset
 
-`subset` 不属于 Istio 创建的 CRD，但是它是一条重要的配置信息，有必要单独说明下。`subset` 是服务端点的集合，可以用于 A/B 测试或者分版本路由等场景。参考 [`VirtualService`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#virtualservice) 文档，其中会有更多这方面应用的例子。另外在 `subset` 中可以覆盖服务级别的即 `VirtualService` 中的定义的流量策略。
+`subset` 不属于 Istio 创建的 CRD，但是它是一条重要的配置信息，有必要单独说明下。`subset` 是服务端点的集合，可以用于 A/B 测试或者分版本路由等场景。另外在 `subset` 中可以覆盖服务级别的即 `VirtualService` 中的定义的流量策略。
 
 以下是`subset` 的配置信息。对于 Kubernetes 中的服务，一个 `subset` 相当于使用 label 的匹配条件选出来的 `service`。
 
-| 字段            | 类型                                                         | 描述                                                         |
-| --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `name`          | `string`                                                     | 必要字段。服务名和 `subset` 名称可以用于路由规则中的流量拆分。 |
-| `labels`        | `map<string, string>`                                        | 必要字段。使用标签对服务注册表中的服务端点进行筛选。         |
-| `trafficPolicy` | [`TrafficPolicy`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#trafficpolicy) | 应用到这一 `subset` 的流量策略。缺省情况下 `subset` 会继承 `DestinationRule` 级别的策略，这一字段的定义则会覆盖缺省的继承策略。 |
+| 字段            | 类型                  | 描述                                                         |
+| --------------- | --------------------- | ------------------------------------------------------------ |
+| `name`          | `string`              | 必要字段。服务名和 `subset` 名称可以用于路由规则中的流量拆分。 |
+| `labels`        | `map<string, string>` | 必要字段。使用标签对服务注册表中的服务端点进行筛选。         |
+| `trafficPolicy` | `TrafficPolicy`       | 应用到这一 `subset` 的流量策略。缺省情况下 `subset` 会继承 `DestinationRule` 级别的策略，这一字段的定义则会覆盖缺省的继承策略。 |
 
 ### DestinationRule
 
@@ -72,11 +72,11 @@ spec:
 
 下面是 `DestinationRule` 的配置说明。
 
-| 字段            | 类型                                                         | 描述                                                         |
-| --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `name`          | `string`                                                     | 必要字段。服务名和 `subset` 名称可以用于路由规则中的流量拆分。 |
-| `labels`        | `map<string, string>`                                        | 必要字段。使用标签对服务注册表中的服务端点进行筛选。         |
-| `trafficPolicy` | [`TrafficPolicy`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#trafficpolicy) | 应用到这一子集的流量策略。缺省情况下子集会继承 `DestinationRule` 级别的策略，这一字段的定义则会覆盖缺省的继承策略。 |
+| 字段            | 类型                  | 描述                                                         |
+| --------------- | --------------------- | ------------------------------------------------------------ |
+| `name`          | `string`              | 必要字段。服务名和 `subset` 名称可以用于路由规则中的流量拆分。 |
+| `labels`        | `map<string, string>` | 必要字段。使用标签对服务注册表中的服务端点进行筛选。         |
+| `trafficPolicy` | `TrafficPolicy`       | 应用到这一子集的流量策略。缺省情况下子集会继承 `DestinationRule` 级别的策略，这一字段的定义则会覆盖缺省的继承策略。 |
 
 **示例**
 
@@ -103,11 +103,11 @@ Istio 服务网格内部会维护一个与平台无关的使用通用模型表�
 
 ### EnvoyFilter
 
-[`EnvoyFilter`](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#envoyfilter) 描述了针对代理服务的过滤器，用来定制由 Istio Pilot 生成的代理配置。一定要谨慎使用此功能。错误的配置内容一旦完成传播，可能会令整个服务网格陷入瘫痪状态。这一配置是用于对 Istio 网络系统内部实现进行变更的，属于高级配置，用于扩展 Envoy 中的过滤器的。
+`EnvoyFilter` 描述了针对代理服务的过滤器，用来定制由 Istio Pilot 生成的代理配置。一定要谨慎使用此功能。错误的配置内容一旦完成传播，可能会令整个服务网格陷入瘫痪状态。这一配置是用于对 Istio 网络系统内部实现进行变更的，属于高级配置，用于扩展 Envoy 中的过滤器的。
 
 ### Gateway
 
-[Gateway](https://preliminary.istio.io/zh/docs/reference/config/istio.networking.v1alpha3/#gateway) 为 HTTP/TCP 流量配置了一个负载均衡，多数情况下在网格边缘进行操作，用于启用一个服务的入口（ingress）流量，相当于前端代理。与 Kubernetes 的 Ingress 不同，Istio `Gateway` 只配置四层到六层的功能（例如开放端口或者 TLS 配置），而 Kubernetes 的 Ingress 是七层的。将 `VirtualService` 绑定到 `Gateway` 上，用户就可以使用标准的 Istio 规则来控制进入的 HTTP 和 TCP 流量。
+Gateway 为 HTTP/TCP 流量配置了一个负载均衡，多数情况下在网格边缘进行操作，用于启用一个服务的入口（ingress）流量，相当于前端代理。与 Kubernetes 的 Ingress 不同，Istio `Gateway` 只配置四层到六层的功能（例如开放端口或者 TLS 配置），而 Kubernetes 的 Ingress 是七层的。将 `VirtualService` 绑定到 `Gateway` 上，用户就可以使用标准的 Istio 规则来控制进入的 HTTP 和 TCP 流量。
 
 Gateway 设置了一个集群外部流量访问集群中的某些服务的入口，而这些流量究竟如何路由到那些服务上则需要通过配置 `VirtualServcie` 来绑定。下面仍然以 `productpage` 这个服务来说明。
 
@@ -299,11 +299,11 @@ spec:
 
 ![VirtualSerivce 和 DestimationRule 示意图](../images/istio-virtualservice-and-destinationrule-illustration.png)
 
-在前提条件中我部署了该示例，并列出了该示例中的所有 pod，现在我们使用 [istioctl](https://preliminary.istio.io/zh/docs/reference/commands/istioctl) 命令来启动查看 `productpage-v1-745ffc55b7-2l2lw` pod 中的流量配置。
+在前提条件中我部署了该示例，并列出了该示例中的所有 pod，现在我们使用 istioctl 命令来启动查看 `productpage-v1-745ffc55b7-2l2lw` pod 中的流量配置。
 
 **查看 pod 中 Envoy sidecar 的启动配置信息**
 
-[Bootstrap](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-msg-config-bootstrap-v2-bootstrap) 消息是 Envoy 配置的根本来源，[Bootstrap](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-msg-config-bootstrap-v2-bootstrap) 消息的一个关键的概念是静态和动态资源的之间的区别。例如 [Listener](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/lds.proto.html#envoy-api-msg-listener) 或 [Cluster](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cds.proto.html#envoy-api-msg-cluster) 这些资源既可以从 [static_resources](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-field-config-bootstrap-v2-bootstrap-static-resources) 静态的获得也可以从 [dynamic_resources](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/bootstrap/v2/bootstrap.proto.html#envoy-api-field-config-bootstrap-v2-bootstrap-dynamic-resources) 中配置的  LDS 或 CDS 之类的 xDS 服务获取。关于 xDS 服务的详解请参考 [Envoy 中的 xDS REST 和 gRPC 协议详解](https://cloudnative.to/blog/envoy-xds-protocol/)。
+Bootstrap 消息是 Envoy 配置的根本来源，Bootstrap 消息的一个关键的概念是静态和动态资源的之间的区别。例如 Listener 或 Cluster 这些资源既可以从静态资源中获得也可以从动态资源中配置的  LDS 或 CDS 之类的 xDS 服务获取。关于 xDS 服务的详解请参考 [Envoy 中的 xDS REST 和 gRPC 协议详解](https://cloudnative.to/blog/envoy-xds-protocol/)。
 
 ```bash
 $ istioctl proxy-config bootstrap productpage-v1-745ffc55b7-2l2lw -o json
@@ -496,7 +496,7 @@ spec:
 EOF
 ```
 
-同时配置了三个 `subset` 当你需要切分流量时可以直接修改 `VirtualService` 中 `destination` 里的 `subset` 即可，还可以根据百分比拆分流量，配置超时和重试，进行错误注入等，详见[流量管理](https://istio.io/zh/docs/concepts/traffic-management/)
+同时配置了三个 `subset` 当你需要切分流量时可以直接修改 `VirtualService` 中 `destination` 里的 `subset` 即可，还可以根据百分比拆分流量，配置超时和重试，进行错误注入等。
 
 当然上面这个例子中只是简单的将流量全部导到某个 `VirtualService` 的 `subset` 中，还可以根据其他限定条件如 HTTP headers、pod 的 label、URL 等。
 
@@ -514,9 +514,6 @@ reviews.default.svc.cluster.local                           9080      v3        
 
 ## 参考
 
-- [流量管理 - istio.io](https://istio.io/zh/docs/concepts/traffic-management/)
-- [通信路由 - istio.io](https://istio.io/zh/docs/reference/config/istio.networking.v1alpha3/)
-- [istioctl 指南 - istio.io](https://istio.io/zh/docs/reference/commands/istioctl/)
 - [Envoy 官方文档中文版 - cloudnative.to](https://cloudnative.to/envoy/)
 - [Envoy v2 API 概览 - cloudnative.to](https://cloudnative.to/envoy/configuration/overview/v2_overview.html)
-- [Envoy 中的 xDS REST 和 gRPC 协议详解 - servicemesher.com](https://cloudnative.to/blog/envoy-xds-protocol/)
+- [Envoy 中的 xDS REST 和 gRPC 协议详解 - cloudnative.to](https://cloudnative.to/blog/envoy-xds-protocol/)

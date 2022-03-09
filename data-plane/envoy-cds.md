@@ -1,16 +1,13 @@
 # CDS（集群发现服务）
 
-集群发现服务（CDS）是一个可选的 API，Envoy 将调用该 API 来动态获取 cluster manager 的成员。Envoy 还将根据 API 响应协调集群管理，根据需要完成添加、修改或删除已知的集群。
+集群发现服务（CDS）是一个可选的 API，Envoy 将调用该 API 来动态获取集群管理器的成员。Envoy 还将根据 API 响应协调集群管理，根据需要完成添加、修改或删除已知的集群。
 
 关于 Envoy 是如何通过 CDS 从 `pilot-discovery` 服务中获取的 cluster 配置，请参考 [Service Mesh深度学习系列part3—istio源码分析之pilot-discovery模块分析（续）](https://cloudnative.to/blog/istio-service-mesh-source-code-pilot-discovery-module-deepin-part2/)一文中的 CDS 服务部分。
 
 **注意**
 
 - 在 Envoy 配置中静态定义的 cluster 不能通过 CDS API 进行修改或删除。
-
 - Envoy 从 1.9 版本开始已不再支持 v1 API。
-
-- [v2 CDS API](https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/v2_overview#v2-grpc-streaming-endpoints)
 
 ## 统计
 
