@@ -234,7 +234,7 @@ round(sum(rate(istio_requests_total{reporter="source",source_workload_namespace=
 
 其中的参数都是通过页面选择传入的（构建的 PQL 中的选项在 `kiali/graph/options/options.go` 中定义）：
 
-- `reporter="source"`：metric 报告来源，源服务（source）是 [envoy](https://istio.io/zh/help/glossary/#envoy) 代理的下游客户端。在[服务网格](https://istio.io/zh/help/glossary/#%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC)里，一个源服务通常是一个[工作负载](https://istio.io/zh/help/glossary/#%E5%B7%A5%E4%BD%9C%E8%B4%9F%E8%BD%BD)，但是入口流量的源服务有可能包含其他客户端，例如浏览器，或者一个移动应用。
+- `reporter="source"`：metric 报告来源，源服务（source）是 Envoy 代理的下游客户端。在服务网格里，一个源服务通常是一个工作负载，但是入口流量的源服务有可能包含其他客户端，例如浏览器，或者一个移动应用。
 - `source_workload_namespace="default"`：选择命名空间。
 - `response_code`：返回码区间。
 - `[600s]`：查询的数据中的时间间隔。
@@ -336,7 +336,5 @@ type Edge struct {
 
 ## 参考
 
-- [Kiali.io](https://www.kiali.io)
 - [QUERY EXAMPLES - prometheus.io](https://prometheus.io/docs/prometheus/latest/querying/examples/)
 - [replace Service Graph with Kiali #9066 - github.com](https://github.com/istio/istio/issues/9066)
-- [rootsongjc/kubernetes-vagrant-centos-cluster - github.com](https://github.com/rootsongjc/kubernetes-vagrant-centos-cluster)

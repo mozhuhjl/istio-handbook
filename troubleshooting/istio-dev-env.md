@@ -8,7 +8,7 @@ Istio 开发环境依赖以下软件：
 
 - [Docker](https://docs.docker.com/install/)：测试和运行时
 - [Go 1.11](https://golang.org)：程序开发
-- [fpm 包构建工具](https://fpm.readthedocs.io/en/latest/intro.html)：用来打包
+- fpm 包构建工具：用来打包
 - [Kubernetes](https://jimmysong.io/kubernetes-handbook) 1.7.3+
 
 ## 设置环境变量

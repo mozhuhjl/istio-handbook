@@ -132,20 +132,20 @@ Cluster 的数据结构如下，除了 `name` 字段，其他都是可选的。
 下面是关于上述数据结构中的常用配置解析。
 
 - **name**：如果你留意到作为 Sidecar 启动的 Envoy 的参数的会注意到 `--max-obj-name-len 189`，该选项用来用来指定 cluster 的名字，例如 `inbound|9080||ratings.default.svc.cluster.local`。该名字字符串由 `|` 分隔成四个部分，分别是 `inbound` 或 `outbound` 代表入向流量或出向流量、端口号、subcluster 名称、FQDN，其中 subcluster 名称将对应于 Istio `DestinationRule` 中配置的 `subnet`，如果是按照多版本按比例路由的话，该值可以是版本号。
-- **type**：即[服务发现类型](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/service_discovery#arch-overview-service-discovery-types)，支持的参数有 `STATIC`（缺省值）、`STRICT_DNS`、`LOGICAL_DNS`、`EDS`、`ORIGINAL_DST`。
+- **type**：即服务发现类型，支持的参数有 `STATIC`（缺省值）、`STRICT_DNS`、`LOGICAL_DNS`、`EDS`、`ORIGINAL_DST`。
 - **hosts**：这是个列表，配置负载均衡的 IP 地址和端口，只有使用了  `STATIC`、`STRICT_DNS`、`LOGICAL_DNS` 服务发现类型时才需要配置。
 - **eds_cluster_config**：如果使用 `EDS` 做服务发现，则需要配置该项目，其中包括的配置有 `service_name` 和 `ads`。
 
 ### Route
 
-我们在这里所说的路由指的是 HTTP 路由，这也使得 Envoy 可以用来处理网格边缘的流量。HTTP 路由转发是通过路由过滤器实现的。该过滤器的主要职能就是执行[路由表](https://www.envoyproxy.io/docs/envoy/latest/api-v1/route_config/route_config#config-http-conn-man-route-table)中的指令。除了可以做重定向和转发，路由过滤器还需要处理重试、统计之类的任务。
+我们在这里所说的路由指的是 HTTP 路由，这也使得 Envoy 可以用来处理网格边缘的流量。HTTP 路由转发是通过路由过滤器实现的。该过滤器的主要职能就是执行路由表中的指令。除了可以做重定向和转发，路由过滤器还需要处理重试、统计之类的任务。
 
 **HTTP 路由的特点**
 
 - 前缀和精确路径匹配规则。
-- 可跨越多个上游集群进行基于[权重/百分比的路由](https://www.envoyproxy.io/docs/envoy/latest/api-v1/route_config/route#config-http-conn-man-route-table-route-weighted-clusters)。
+- 可跨越多个上游集群进行基于权重/百分比的路由。
 - 基于优先级的路由。
-- 基于[哈希](https://www.envoyproxy.io/docs/envoy/latest/api-v1/route_config/route#config-http-conn-man-route-table-hash-policy)策略的路由。
+- 基于哈希策略的路由。
 
 **Route 的数据结构**
 
@@ -166,7 +166,7 @@ Cluster 的数据结构如下，除了 `name` 字段，其他都是可选的。
 
 - **name**：该名字跟 `envoy.http_connection_manager` filter 中的 `http_filters.rds.route_config_name` 一致，在 Istio Service Mesh 中为 Envoy 下发的配置中的 Route 是以监听的端口号作为名字，而同一个名字下面的 `virtual_hosts` 可以有多个值（数组形式）。
 - **virtual_hosts**：因为 **VirtualHosts** 是 Envoy 中引入的一个重要概念，我们在下文将详细说明 `virtual_hosts` 的数据结构。
-- **validate_clusters**：这是一个布尔值，用来设置开启使用 cluster manager 来检测路由表引用的 cluster 是否有效。如果是路由表是通过 [route_config](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/filter/network/http_connection_manager/v2/http_connection_manager.proto#envoy-api-field-config-filter-network-http-connection-manager-v2-httpconnectionmanager-route-config) 静态配置的则该值默认设置为 true，如果是使用 [rds](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/filter/network/http_connection_manager/v2/http_connection_manager.proto#envoy-api-field-config-filter-network-http-connection-manager-v2-httpconnectionmanager-rds) 动态配置的话，则该值默认设置为 false。
+- **validate_clusters**：这是一个布尔值，用来设置开启使用 cluster manager 来检测路由表引用的 cluster 是否有效。如果是路由表是通过 `route_config` 静态配置的则该值默认设置为 true，如果是使用 RDS 动态配置的话，则该值默认设置为 false。
 
 #### route.VirtualHost
 
@@ -307,7 +307,7 @@ VirtualHost 即上文中 Route 配置中的 `virtual_hosts`，VirtualHost 是路
 下面是关于上述数据结构中的常用配置解析。
 
 - **match**：路由匹配参数。例如 URL prefix（前缀）、path（URL 的完整路径）、regex（规则表达式）等。
-- **route**：这里面配置路由的行为，可以是 [route](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-route)、[redirect](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-redirect) 和 [direct_response](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/route/route.proto#envoy-api-field-route-route-direct-response)，不过这里面没有专门的一个配置项用来配置以上三种行为，而是根据实际填充的配置项来确定的。例如在此处添加 `cluster` 配置则暗示路由动作为”route“，表示将流量路由到该 cluster。
+- **route**：这里面配置路由的行为，可以是 route、redirect 和 `direct_response`，不过这里面没有专门的一个配置项用来配置以上三种行为，而是根据实际填充的配置项来确定的。例如在此处添加 `cluster` 配置则暗示路由动作为”route“，表示将流量路由到该 cluster。
 - **decorator**：被匹配的路由的修饰符，表示被匹配的虚拟主机和 URL。该配置里有且只有一个必须配置的项 `operation`，例如 `details.default.svc.cluster.local:9080/*`。
 - **per_filter_config**：这是一个 map 类型，`per_filter_config` 字段可用于为 filter 提供特定路由的配置。Map 的 key 应与 filleter 名称匹配，例如用于 HTTP buffer filter 的 `envoy.buffer`。
 

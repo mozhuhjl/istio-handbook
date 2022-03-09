@@ -16,7 +16,3 @@ RDS 的统计树以 `http.<stat_prefix>.rds.<route_config_name>.*.`为根，`rou
 | update_failure  | Counter | 调用配置加载 API 因网络错误的失败总数           |
 | update_rejected | Counter | 调用配置加载 API 因 schema/验证错误的失败总次数 |
 | version         | Gauge   | 来自上次成功调用配置加载API的内容哈希           |
-
-## 参考
-
-- [Route discovery service(RDS) - envoyproxy.io](https://www.envoyproxy.io/docs/envoy/latest/configuration/http_conn_man/rds)

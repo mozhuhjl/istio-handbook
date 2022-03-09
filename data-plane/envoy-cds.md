@@ -22,7 +22,3 @@ CDS 的统计树以 `cluster_manager.cds.` 为根，统计如下：
 | update_rejected               | Counter | 调用配置加载 API 因 schema/验证错误的失败总次数              |
 | version                       | Gauge   | 来自上次成功调用配置加载API的内容哈希                        |
 | control_plane.connected_state | Gauge   | 布尔值，用来表示与管理服务器的连接状态，1表示已连接，0表示断开连接 |
-
-## 参考
-
-- [Cluster discovery service - envoyproxy.io](https://www.envoyproxy.io/docs/envoy/latest/configuration/cluster_manager/cds)

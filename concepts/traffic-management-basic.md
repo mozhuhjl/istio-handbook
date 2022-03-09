@@ -515,5 +515,4 @@ reviews.default.svc.cluster.local                           9080      v3        
 ## 参考
 
 - [Envoy 官方文档中文版 - cloudnative.to](https://cloudnative.to/envoy/)
-- [Envoy v2 API 概览 - cloudnative.to](https://cloudnative.to/envoy/configuration/overview/v2_overview.html)
 - [Envoy 中的 xDS REST 和 gRPC 协议详解 - cloudnative.to](https://cloudnative.to/blog/envoy-xds-protocol/)

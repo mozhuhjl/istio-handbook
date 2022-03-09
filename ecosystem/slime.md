@@ -85,8 +85,6 @@ Slime 共有两个 CRD 用于 HTTP 插件管理，分别是：
 - **PluginManager**：配置为哪些负载开启哪些插件，插件的配置顺序即为执行顺序；
 - **EnvoyPlugin**：EnvoyPlugin 不关心每个插件的具体配置，具体配置会被放在 EnvoyFilter 资源的 `patch.typed_config` 结构中透传），EnvoyPlugin 的核心思想是将插件配置在需要的维度中做聚合，从而限定插件的生鲜范围。这样做一方面更加贴合插件使用者的习惯，另一方面也降低了上层配置的冗余，
 
-关于 Slime 中插件管理的详细使用方式请见 [Slime GitHub](https://github.com/slime-io/slime/blob/master/doc/zh/plugin_manager.md)。
-
 ## 自适应限流
 
 Envoy 内置的限流组件功能单一，只能以实例维度配置限流值，无法做到根据应用负载的自适应限流。Slime 通过与 Prometheus metric server 对接，实时的获取监控情况，来动态配置限流值。

@@ -33,7 +33,3 @@ SDS 支持静态配置也支持动态配置。
 - 通过 Envoy gRPC 访问 SDS server。
 
 配置详情请参考 [Envoy 官方文档](https://www.envoyproxy.io/docs/envoy/latest/configuration/secret)。
-
-## 参考
-
-- [Secret discovery service (SDS) - envoyproxy.io](https://www.envoyproxy.io/docs/envoy/latest/configuration/secret)

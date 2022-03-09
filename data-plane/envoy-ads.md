@@ -5,7 +5,3 @@
 **ADS 通过适当得排序 xDS 可以无中断的更新 Envoy 的配置。**例如，假设 foo.com 已映射到集群 X。我们希望将路由表中将该映射更改为在集群 Y。为此，必须首先提供 X、Y 这两个集群的 CDS/EDS 更新。
 
 如果没有 ADS，CDS/EDS/RDS 流可能指向不同的管理服务器，或者位于需要协调的不同 gRPC流连接的同一管理服务器上。EDS 资源请求可以跨两个不同的流分开，一个用于 X，一个用于 Y。ADS 将这些流合并到单个流和单个管理服务器，从而无需分布式同步就可以正确地对更新进行排序。使用 ADS，管理服务器将在单个流上提供 CDS、EDS 和 RDS 更新。
-
-## 参考
-
-- [Aggregated Discovery Service - envoyproxy.io](https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/v2_overview#aggregated-discovery-service)

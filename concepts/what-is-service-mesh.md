@@ -15,7 +15,7 @@ Service Mesh 又译作 “服务网格”，作为服务间通信的基础设施
 - 应用程序无感知
 - 解耦应用程序的重试/超时、监控、追踪和服务发现
 
-目前两款流行的服务网格开源软件 [Linkerd](https://linkerd.io) 和 [Istio](https://Istio.io) 都可以直接在 Kubernetes 中集成，其中 Linkerd 是 CNCF 成员项目，并在 2021 年 7 月毕业。Istio 在 2018年7月31日宣布 [1.0](https://istio.io/zh/blog/2018/announcing-1.0/)，并在 2020 年 7 月将[商标捐献](https://istio.io/latest/blog/2020/open-usage/)给 [Open Usage Commons](https://openusage.org/)。
+目前两款流行的服务网格开源软件 [Linkerd](https://linkerd.io) 和 [Istio](https://Istio.io) 都可以直接在 Kubernetes 中集成，其中 Linkerd 是 CNCF 成员项目，并在 2021 年 7 月毕业。Istio 在 2018年7月31日宣布 1.0，并在 2020 年 7 月将[商标捐献](https://istio.io/latest/blog/2020/open-usage/)给 [Open Usage Commons](https://openusage.org/)。
 
 ## 理解服务网格
 
