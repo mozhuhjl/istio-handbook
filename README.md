@@ -7,6 +7,7 @@
     <img src="images/cover-thumbnail.jpg" alt="Istio 服务网格——云原生应用网络构建指南">
   </a>
 </p>
+
 ## 关于本书
 
 本书的主题包括：
@@ -38,3 +39,15 @@
 ## 参与本书
 
 请参考 [Istio 文档样式指南](https://istio.io/latest/about/contribute/style-guide/)。
+
+## 云原生社区
+
+<p align="center">
+  <a href="https://cloudnative.to">
+    <img src="./images/github-banner.jpg" alt="加入云原生社区" title="加入云原生社区">
+  </a>
+</p>
+
+云原生社区是中国最大的独立第三方云原生终端用户和泛开发者社区，由 CNCF 大使、开源意见领袖共同发起成立于 2020 年 5 月 12 日，提供云原生专业资讯，促进云原生产业发展。
+
+官方网站 <https://cloudnative.to>，关注云原生社区微信公众号，[申请加入社区](https://mp.weixin.qq.com/s/vWlSdzz2MNdXRr0sd2-LFg)。
