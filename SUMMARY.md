@@ -55,6 +55,7 @@
   - [ServiceEntry](config/networking/service-entry.md)
   - [WorkloadEntry](config/networking/workload-entry.md)
   - [WorkloadGroup](config/networking/workload-group.md)
+  - [ProxyConifg](config/networking/proxy-config.md)
 - [安全配置概述](config/security/index.md)
   - [AuthorizationPolicy](config/security/authorization-policy.md)
   - [RequestAuthentication](config/security/request-authentication.md)
