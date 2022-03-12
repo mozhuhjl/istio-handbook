@@ -4,9 +4,10 @@
 
 <p align="center">
   <a href="https://jimmysong.io/istio-handbook">
-    <img src="images/cover-thumbnail.jpg" alt="Istio 服务网格——云原生应用网络构建指南">
+    <img src="cover-thumbnail.jpg" alt="Istio 服务网格——云原生应用网络构建指南">
   </a>
 </p>
+
 
 ## 关于本书
 
