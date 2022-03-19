@@ -60,3 +60,4 @@ spec:
 当一个 VirtualService 被附加到一个网关上时，只允许在网关资源中定义的主机。下表解释了网关资源中的 `hosts` 字段如何作为过滤器，以及 VirtualService 中的 `hosts` 字段如何作为匹配。
 
 ![Gateway 配置](../images/gateway-config.png)
+
