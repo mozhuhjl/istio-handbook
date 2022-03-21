@@ -78,6 +78,7 @@
 ## 可观察性
 
 - [可观察性概述](observability/index.md)
+- [Telemetry API](observability/telemetry-api.md)
 - [Prometheus](observability/prometheus.md)
 - [Grafana](observability/grafana.md)
 - [Zipkin](observability/zipkin.md)
