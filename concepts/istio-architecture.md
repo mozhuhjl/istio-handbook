@@ -14,7 +14,7 @@ Sidecar 模式是 Istio 开源之初就在使用的模式，这种模式将应�
 
 ## Proxyless 模式
 
-Proxyless 模式是 Istio 1.11 版本中支持的实验特性，Istio 官网中有篇博客介绍了这个特性。可以直接将 gRPC 服务添加到 Istio 中，不需要再向 Pod 中注入 Envoy 代理。这样做可以极大的提升应用性能，降低网络延迟。有人说这种做法又回答了原始的基于 SDK 的微服务模式，其实非也，它依然使用了 Envoy 的 xDS API，但是因为不再需要向应用程序中注入 Sidecar 代理，因此可以减少应用程序性能的损耗。
+Proxyless 模式是 Istio 1.11 版本中支持的实验特性，Istio 官网中有篇博客介绍了这个特性。可以直接将 gRPC 服务添加到 Istio 中，不需要再向 Pod 中注入 Envoy 代理。这样做可以极大的提升应用性能，降低网络延迟。有人说这种做法又回到了原始的基于 SDK 的微服务模式，其实非也，它依然使用了 Envoy 的 xDS API，但是因为不再需要向应用程序中注入 Sidecar 代理，因此可以减少应用程序性能的损耗。
 
 ![Proxyless 模式](../images/proxyless-mode.png)
 
