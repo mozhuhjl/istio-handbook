@@ -59,9 +59,9 @@ spec:
     - "*"
 ```
 
-上面的网关规范描述了负载均衡器的 L4 到 L6 属性。然后，一个 VirtualService 可以被绑定到一个 Gateway 上，以控制到达特定主机或网关端口的流量的转发。
+上面的网关规范描述了负载均衡器的 L4 到 L6 属性。然后，VirtualService 可以被绑定到 Gateway 上，以控制到达特定主机或网关端口的流量的转发。
 
-例如，下面的 VirtualService 将 `https://uk.bookinfo.com/reviews`、`https://eu.bookinfo.com/reviews`、 `http://uk.bookinfo.com:9080/reviews`、`http://eu.bookinfo.com:9080/reviews` 的流量分成两个版本（prod 和 qa）的内部 reviews 服务，端口为 9080。此外，包含 cookie `user: dev-123` 的请求将被发送到 qa 版本的特殊端口 7777。同样的规则也适用于网格内部对 `reviews.prod.svc.cluster.local` 服务的请求。这个规则适用于 443、9080 端口。请注意，`http://uk.bookinfo.com` 会被重定向到 `https://uk.bookinfo.com`（即 80 重定向到 443）。
+例如，下面的 VirtualService 将 `https://uk.bookinfo.com/reviews`、`https://eu.bookinfo.com/reviews`、 `http://uk.bookinfo.com:9080/reviews`、`http://eu.bookinfo.com:9080/reviews` 的流量分成两个版本（`prod` 和 `qa`）的内部 reviews 服务，这两个版本分别运行在 `prod` 和 `qa` 命名空间中，端口为 9080。此外，包含 cookie `user: dev-123` 的请求将被发送到 qa 版本的特殊端口 7777。以上规则也适用于网格内部对 `reviews.prod.svc.cluster.local` 服务的请求。`prod` 版本获得 80% 的流量，`qa` 版本获得 20% 的流量。
 
 ```yaml
 apiVersion: networking.istio.io/v1alpha3
@@ -113,7 +113,7 @@ spec:
   hosts:
   - mongosvr.prod.svc.cluster.local # 内部 Mongo 服务的名字
   gateways:
-  - some-config-namespace/my-gateway # 如果网关与虚拟服务处于同一命名空间，可以省略命名空间。
+  - some-config-namespace/my-gateway # 如果 Gateway 与 VirtualService 处于同一命名空间，可以省略命名空间。
   tcp:
   - match:
     - port: 27017
@@ -124,7 +124,7 @@ spec:
           number: 5555
 ```
 
-以使用 `hosts` 字段中的命名空间/主机名语法来限制可以绑定到网关服务器的虚拟服务集。例如，下面的网关允许 `ns1` 命名空间中的任何虚拟服务与之绑定，而只限制 `ns2` 命名空间中的 `foo.bar.com` 主机的虚拟服务与之绑定。
+可以在 `hosts` 字段中**命名空间/主机名**语法来限制可以绑定到网关服务器的虚拟服务集。例如，下面的 Gateway 允许 `ns1` 命名空间中的任何 VirtualService 与之绑定，而只限制 `ns2` 命名空间中的 `foo.bar.com` 主机的 VirtualService 与之绑定。
 
 ```yaml
 apiVersion: networking.istio.io/v1alpha3
@@ -144,6 +144,17 @@ spec:
     - "ns1/*"
     - "ns2/foo.bar.com"
 ```
+
+## 配置项
+
+下图是 Gateway 资源的配置拓扑图。
+
+![Gateway 资源配置拓扑图](../../images/gateway.png)
+
+Gateway 资源的顶级配置项目如下：
+
+- `selector`：一个或多个标签，表明应在其上应用该网关配置的一组特定的 pod/VM。默认情况下，工作负载是根据标签选择器在所有命名空间中搜索的。这意味着命名空间 "foo" 中的网关资源可以根据标签选择命名空间 "bar" 中的 pod。这种行为可以通过 istiod 中的 `PILOT_SCOPE_GATEWAY_TO_NAMESPACE` 环境变量控制。如果这个变量被设置为 "true"，标签搜索的范围将被限制在资源所在的配置命名空间。换句话说，Gateway 资源必须驻留在与 Gateway 工作负载实例相同的命名空间中。如果选择器为nil，Gateway 将被应用于所有工作负载。
+- `servers`：描述了特定负载均衡器端口上的代理的属性。
 
 关于 Gateway 配置的详细用法请参考 [Istio 官方文档](https://istio.io/latest/docs/reference/config/networking/gateway/)。
 

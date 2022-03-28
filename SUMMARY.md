@@ -47,14 +47,14 @@
 ## 配置
 
 - [流量管理配置概述](config/networking/index.md)
+  - [Gateway](config/networking/gateway.md)
   - [VirtualService](config/networking/virtual-service.md)
   - [DestinationRule](config/networking/destination-rule.md)
-  - [Gateway](config/networking/gateway.md)
-  - [EnvoyFilter](config/networking/envoy-filter.md)
-  - [Sidecar](config/networking/sidecar.md)
-  - [ServiceEntry](config/networking/service-entry.md)
   - [WorkloadEntry](config/networking/workload-entry.md)
   - [WorkloadGroup](config/networking/workload-group.md)
+  - [ServiceEntry](config/networking/service-entry.md)
+  - [Sidecar](config/networking/sidecar.md)
+  - [EnvoyFilter](config/networking/envoy-filter.md)
   - [ProxyConifg](config/networking/proxy-config.md)
 - [安全配置概述](config/security/index.md)
   - [AuthorizationPolicy](config/security/authorization-policy.md)

@@ -1,6 +1,6 @@
 # Sidecar
 
-`Sidecar` 描述了 sidecar 代理的配置，该代理负责调解与它所连接的工作负载实例的 inbound 和 outbound 通信。默认情况下，Istio 会对网格中的所有 sidecar 代理进行必要的配置，以达到网格中的每个工作负载实例，并接受与工作负载相关的所有端口的流量。`Sidecar` 配置提供了一种方法来微调代理在转发工作负载的流量时将接受的一组端口和协议。此外，还可以限制代理在转发工作负载实例的 outbound 流量时可以到达的服务集。
+`Sidecar` 描述了 sidecar 代理的配置，该代理负责协调与它所连接的工作负载实例的 inbound 和 outbound 通信。默认情况下，Istio 会对网格中的所有 sidecar 代理进行必要的配置，以达到网格中的每个工作负载实例，并接受与工作负载相关的所有端口的流量。`Sidecar` 配置提供了一种方法来微调代理在转发工作负载的流量时将接受的一组端口和协议。此外，还可以限制代理在转发工作负载实例的 outbound 流量时可以到达的服务集。
 
 网格中的服务和配置被组织到一个或多个命名空间（例如，Kubernetes 命名空间）。命名空间中的 Sidecar 配置将适用于同一命名空间中的一个或多个工作负载实例，并通过 `workloadSelector` 字段进行选择。在没有 `workloadSelector` 的情况下，它将适用于同一命名空间的所有工作负载实例。在确定应用于工作负载实例的 `Sidecar` 配置时，将优先考虑具有选择该工作负载实例的 `workloadSelector` 的资源，而不是没有任何 `workloadSelector` 的 Sidecar 配置。
 
@@ -10,7 +10,7 @@
 
 ### 注意一
 
-每个命名空间只能有一个没有任何 `workloadSelector` 的 Sidecar 配置，该配置为该命名空间的所有 pod 指定了默认配置。建议对整个命名空间的 sidecar 命名为 `defatult`。如果在一个给定的命名空间中存在多个无选择器的 Sidecar 配置，则系统的行为未被定义。如果两个或更多带有 `workloadSelector` 的 `Sidecar` 配置选择了同一个工作负载实例，那么系统的行为将无法定义。
+每个命名空间只能有一个没有任何 `workloadSelector` 的 Sidecar 配置，该配置为该命名空间的所有 pod 指定了默认配置。建议对整个命名空间的 sidecar 命名为 `defatult`。如果在一个给定的命名空间中存在多个无选择器的 Sidecar 配置，则系统的行为未定义。如果两个或更多带有 `workloadSelector` 的 `Sidecar` 配置选择了同一个工作负载实例，那么系统的行为将无法定义。
 
 ### 注意二
 
@@ -33,7 +33,7 @@ spec:
     - "istio-system/*"
 ```
 
-下面的例子在 `prod-us1` 命名空间中声明了一个 `Sidecar` 配置，它覆盖了上面定义的全局默认值，并配置了命名空间中的 sidecar，以允许向 `prod-us1`、`prod-apis` 和 `istio-system` 命名空间的公共服务输出流量。
+下面的例子在 `prod-us1` 命名空间中声明了一个 `Sidecar` 配置，它覆盖了上面定义的全局默认值，并配置了命名空间中的 sidecar，以允许向 `prod-us1`、`prod-apis` 和 `istio-system` 命名空间的公开服务输出流量。
 
 ```yaml
 apiVersion: networking.istio.io/v1alpha3
@@ -108,7 +108,7 @@ spec:
     - "*/mysql.foo.com"
 ```
 
-以及路由到 `mysql.foo.com:3306` 的相关服务条目。
+以及路由到 `mysql.foo.com:3306` 的相关 ServiceEntry。
 
 ```yaml
 apiVersion: networking.istio.io/v1alpha3
@@ -155,6 +155,19 @@ spec:
     hosts:
     - "*/*"
 ```
+
+## 配置项
+
+下图是 Sidecar 资源的配置拓扑图。
+
+![Sidecar 资源配置拓扑图](../../images/sidecar.png)
+
+Sidecar 资源的顶级配置项如下：
+
+- `workloadSelector`：用于选择应用该 Sidecar 配置的特定 pod/VM 集合的标准。如果省略，Sidecar 配置将被应用于同一命名空间的所有工作负载实例。
+- `ingress`：Ingress 指明用于处理连接工作负载实例的入站流量的 sidecar 配置。如果省略，Istio 将根据从编排平台获得的工作负载信息（例如，暴露的端口、服务等）自动配置 sidecar。如果指定，当且仅当工作负载实例与服务相关联时，将配置入站端口。
+- `egress`：Egress 指定 sidecar 的配置，用于处理从附加工作负载实例到网格中其他服务的出站流量。如果不指定，则继承系统检测到的全命名空间或全局默认 Sidecar 的默认值。
+- `outboundTrafficPolicy`：出站流量策略的配置。如果你的应用程序使用一个或多个事先不知道的外部服务，将策略设置为`ALLOW_ANY`，将导致 sidecar 将任何来自应用程序的未知流量路由到其请求的目的地。如果没有指定，则继承系统检测到的来自全命名空间或全局默认 Sidecar 的默认值。
 
 关于 Sidecar 配置的详细用法请参考 [Istio 官方文档](https://istio.io/latest/docs/reference/config/networking/sidecar/)。
 

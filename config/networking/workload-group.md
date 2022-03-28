@@ -38,6 +38,18 @@ spec:
        value: Im-The-Best
 ```
 
+## 配置项
+
+下图是 WorkloadGroup 资源的配置拓扑图。
+
+![WorkloadGroup 资源配置拓扑图](../../images/workloadgroup.png)
+
+WorkloadGroup 资源的顶级配置项如下：
+
+- `metadata`：元数据，将用于所有相应的 WorkloadEntry。WorkloadGroup 的用户标签应在 `metadata` 中而不是在 `template` 中设置。
+- `template`：用于生成属于该 WorkloadGroup 的 WorkloadEntry 资源的模板。请注意，模板中不应设置 `address` 和 `labels` 字段，而空的 `serviceAccount` 的默认值为 `default`。工作负载身份（mTLS 证书）将使用指定服务账户的令牌进行引导。该组中的 WorkloadEntry 将与 WorkloadGroup 处于同一命名空间，并继承上述 `metadata` 字段中的标签和注释。
+- `probe`：`ReadinessProbe` 描述了用户必须为其工作负载的健康检查提供的配置。这个配置在语法和逻辑上大部分都与 K8s 一致。
+
 关于 WorkloadGroup 配置的详细用法请参考 [Istio 官方文档](https://istio.io/latest/docs/reference/config/networking/workload-group/)。
 
 ## 参考

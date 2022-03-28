@@ -305,6 +305,26 @@ spec:
           type_urls: ["envoy.extensions.filters.http.wasm.v3.Wasm"]
 ```
 
+## 配置项
+
+下图是 EnvoyFilter 资源的配置拓扑图。
+
+![EnvoyFilter 资源配置拓扑图](../../images/envoyfilter.png)
+
+EnvoyFilter 资源的顶级配置项如下：
+
+- `workloadSelector`：用于选择应用此补丁配置的特定 pod/VM 集合的标准。如果省略，该配置中的补丁集将被应用于同一命名空间的所有工作负载实例。如果省略，`EnvoyFilter` 补丁将被应用于同一命名空间的所有工作负载。如果 `EnvoyFilter` 存在于配置根命名空间中，它将被应用于所有命名空间中的所有适用工作负载。
+
+- `configPatches`：一个或多个具有匹配条件的补丁。
+
+- `priority`：优先级定义了在一个环境中应用补丁集的顺序。当一个补丁依赖于另一个补丁时，补丁的应用顺序是很重要的。API 提供了两种主要方式来排列补丁。根命名空间的补丁集在工作负载命名空间的补丁集之前应用。补丁集内的补丁是按照它们在 `configPatches` 列表中出现的顺序处理的。
+
+  优先级的默认值是0，范围是 [ min-int32, max-int32 ]。优先级为负数的补丁集会在默认值之前被处理。优先级为正的补丁在默认值之后处理。
+
+  建议从 10 的倍数的优先级值开始，以便为进一步插入留出空间。
+
+  补丁集按以下升序排列：优先级、创建时间、完全限定的资源名称。
+
 关于 EnvoyFilter 配置的详细用法请参考 [Istio 官方文档](https://istio.io/latest/docs/reference/config/networking/envoy-filter/)。
 
 ## 参考
