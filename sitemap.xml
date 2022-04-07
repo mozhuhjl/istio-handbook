@@ -78,6 +78,7 @@
 <url> <loc>https://jimmysong.io/istio-handbook/troubleshooting/istio-dev-env.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/ecosystem/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/ecosystem/slime.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://jimmysong.io/istio-handbook/ecosystem/merbridge.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/practice/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/practice/create-cluster.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/istio-handbook/practice/online-boutique.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
