@@ -110,6 +110,7 @@
 
 - [Istio 生态概述](ecosystem/index.md)
 - [Slime](ecosystem/slime.md)
+- [Merbridge](ecosystem/merbridge.md)
 
 ## 实践案例
 
