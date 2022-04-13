@@ -91,6 +91,41 @@ VirtualService 资源的顶级配置项如下：
 
   值 `.` 是保留的，它定义了导出到 VirtualService 声明的同一命名空间。同样，值 `*` 也是保留的，它定义了导出到所有命名空间。
 
+## 完整示例
+
+下面是一个相对完整的 VirtualService 配置的示例，其中包含了所有基本配置，对应的解释请见注释。
+
+```yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: reviews-route
+  namespace: bookinfo
+spec:
+  hosts:
+  - reviews.prod.svc.cluster.local #目标主机
+  gateways:
+  - my-gateway #应用路由的网关和 sidecar 的名称
+  http: #HTTP 路由规则
+  - name: "reviews-v2-routes"
+    match:
+    - uri:
+        prefix: "/wpcatalog"
+    rewrite:
+      uri: "/newcatalog"
+    route:
+    - destination:
+        host: reviews.prod.svc.cluster.local
+        subset: v1 #该子集是在 DestinationRule 中设置的
+  tls: #关于 TLS 的设置
+    mode: MUTUAL #一共有四种模式，DISABLE：关闭 TLS 连接；SIMPLE：发起一个与上游端点的 TLS 连接；MUTUAL：手动配置证书，通过出示客户端证书进行认证，使用双向的 TLS 确保与上游的连接；ISTIO_MUTUAL：该模式使用 Istio 自动生成的证书进行 mTLS 认证。
+    clientCertificate: /etc/certs/myclientcert.pem
+    privateKey: /etc/certs/client_private_key.pem
+    caCertificates: /etc/certs/rootcacerts.pem
+  exportTo: #指定 VirtualService 的可见性
+    - "*" #*表示对所有命名空间可见，此为默认值；"."表示仅对当前命名空间可见
+```
+
 关于 VirtualService 配置的详细用法请参考 [Istio 官方文档](https://istio.io/latest/docs/reference/config/networking/virtual-service/)。
 
 ## 参考
