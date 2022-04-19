@@ -77,7 +77,7 @@ Swagger UI 如下图。
 
 ## 架构
 
-Kiali 部署完成后只启动了一个 Pod，前后端都集成在这一个 Pod 中。Kiali 也有一些依赖的组件，例如如果要在 Kiali 的页面中获取到监控 metric 需要使用在 `istio-system` 中部署 Prometheus。分布式卓总直接下图是 Kiali 的架构，来自 Kiali 官网。
+Kiali 部署完成后只启动了一个 Pod，前后端都集成在这一个 Pod 中。Kiali 也有一些依赖的组件，例如如果要在 Kiali 的页面中获取到监控 metric 需要使用在 `istio-system` 中部署 Prometheus。下图是 Kiali 的架构，来自 Kiali 官网。
 
 <div class="gallery">
     <a href="../images/006tNbRwly1fw5je6mg6aj30jg0ayaar.jpg" title="kiali架构图">
