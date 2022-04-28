@@ -1,6 +1,6 @@
 # Sidecar 的自动注入过程详解
 
-在 [Sidecar 注入与流量劫持详解](./sidecar-injection-deep-dive.md)中我只是简单介绍了 Sidecar 注入的步骤，但是没有涉及到具体的 Sidecar 注入流程与细节，这一篇将带大家了解 Istio 为数据平面自动注入 Sidecar 的详细过程。
+这一节将带大家了解 Istio 为数据平面自动注入 Sidecar 的详细过程。
 
 ## Sidecar 注入过程概览
 
@@ -271,4 +271,4 @@ $ istio-iptables [flags]
 ## 参考
 
 - [安装 sidecar - istio.io](https://istio.io/latest/zh/docs/setup/additional-setup/sidecar-injection/)
-- [Istio 中的 Sidecar 注入及透明流量劫持过程详解 - jimmysong.io](http://localhost:1313/blog/sidecar-injection-iptables-and-traffic-routing/)
+- [Istio 中的 Sidecar 注入、透明流量劫持及路由过程详解 - jimmysong.io](http://localhost:1313/blog/sidecar-injection-iptables-and-traffic-routing/)
