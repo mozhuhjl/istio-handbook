@@ -4,5 +4,5 @@
 
 - 服务网格的基本概念
 - Istio 的架构
-- stio 中的主要部署模式——Sidecar 模式
+- Istio 中的主要部署模式——Sidecar 模式
 - 透明流量拦截——Istio 的核心设计思想
